@@ -12,6 +12,8 @@ app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
 app.use('/:agreeId',express.static(path.join(__dirname, 'vendorForm')));
+app.use('/:agreeId',express.static(path.join(__dirname, 'typage')));
+
 
 var transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -42,11 +44,15 @@ schedule.scheduleJob('0 0 * * *', () => {
                 text: 'Please click this link to view our initial prices https://proc-assist.herokuapp.com/'+val["vpid"]
             };  
             transporter.sendMail(mailOptions, function(error, info){
-            if (error) {
-                console.log(error);
-            } else {
-                console.log('Email sent: ' + info.response);
-            }
+                if (error) {
+                    console.log(error);
+                } 
+                else {
+                    console.log('Email sent: ' + info.response);
+                    connection.query(`UPDATE vp set datesent = curdate() where vpid=${val["vpid"]}`, function (error, results, fields) {
+                        if (error) throw error;
+                    });
+                }
             });
                 
         });
@@ -115,6 +121,15 @@ app.get('/:agreeId',(req,res)=>{
     }
     
     function sendq(){
+        var dff=15;
+        connection.query(`SELECT datediff(datesent,curdate()) as dff from vp where vpid=${req.params.agreeId})`, (error, resultsp, fields) =>{
+            if (error) 
+                console.log(error);
+            else
+                dff=resultsp['dff'];
+        });
+        if(dff<8)
+            res.send("Sorry date over ma");
         if(correct)
             res.render(__dirname + "/vendorForm", {name:sendnames["vendorname"],agreeId:req.params.agreeId});
         else
@@ -135,11 +150,11 @@ app.get('/:agreeId',(req,res)=>{
 
 app.post('/:agreeId',(req,res)=>{
     console.log(req.body);
-    res.send(req.params.agreeId);
     connection.query(`INSERT INTO returned (vpid, agreementdate, expirydate, collect, price) VALUES(${req.params.agreeId}, '${req.body.fdate}', '${req.body.tdate}', ${req.body.DC}, ${req.body.lprice})`, (error, resultsp, fields) =>{
         if (error) 
         console.log(error);
     });
+    res.render(__dirname + "/typage");
 });
 
 const PORT = process.env.PORT || 5001;
