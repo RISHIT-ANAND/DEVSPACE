@@ -33,7 +33,11 @@ Once the final Agreement rates are received from all vendors, they are compiled 
 # TECH STAKED INVOVLED:
 
 NODE JS-Backend
+
 MY SQL- Database
+
 HTML- For the Skeleton of the Web Application
+
 CSS- For the Design
+
 JAVA SCRIPT-For The Get and Post Requests
