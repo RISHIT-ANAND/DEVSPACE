@@ -22,7 +22,7 @@ tr:nth-child(even) {background-color: #f2f2f2}
 <table>
 <tr>
 <th> Product Id</th>
-<th>Current date</th>
+<th>Signing date</th>
 <th>Expiry date</th>
 </tr>
 <?php
@@ -31,12 +31,12 @@ $conn = mysqli_connect("remotemysql.com", "Uiz0hUNUje", "k24nEVIJ78", "Uiz0hUNUj
 if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
 }
-$sql = "select productid from Agreement where datediff((expirydate,curdate()) < 15)";
+$sql = "select agreementid, agreementdate, expirydate  from Agreement where datediff(expirydate,curdate()) < 15";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 // output data of each row
 while($row = $result->fetch_assoc()) {
-echo "<tr><td>" . $row["productid"]. "</td><td>" . $row["curdate"] . "</td><td>"
+echo "<tr><td>" . $row["agreementid"]. "</td><td>" . $row["agreementdate"] . "</td><td>"
 . $row["expirydate"]. "</td></tr>";
 }
 echo "</table>";
