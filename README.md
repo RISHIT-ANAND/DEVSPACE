@@ -1,6 +1,6 @@
 # GoComet DIGITAL PROCUREMENT ASSISTANT-Here Comes The Solution!!!!
 
-A web application which shall digitalize the entire procurement system reducing the time taken for the agreement settlement from 45 minutes to 15 minutes. It shall act as a user friendly environment creating the best understanding between the vendors and the buyers socially and financially.
+A web application which shall digitalize the entire procurement system reducing the time taken for the agreement settlement from 45 minutes to 15 minutes and bringing all the stakeholders on a single platform. It shall act as a user friendly environment creating the best understanding between the vendors and the buyers socially and financially.
 
 # Problem Persisting:
 
@@ -16,3 +16,24 @@ Once the agreement date is close by (less than or equal to 15 days from today), 
 The current process of agreement renewal and settlement takes a long time to reach the completion stage.
 
 ### HERE COMES THR NEED OF THE DIGITAL PROCUREMENT ASSISTANT!!!
+
+# WORKING OF GoComet DIGITAL PROCUREMENT ASSISTANT:
+
+The Procurement Assistant identifies all Agreements which will be expiring in the next 15 days.
+
+Procurement Assistant Floats a new RFP among the vendors through email with a deadline. The enitre process shall be done in the backend.
+
+Then the vendors respond to the RFP by replying to the email with an agreement.
+
+Upon receiving the Agreement, the assistant has an option to negotiate by submitting a counter/target price per unit. Our assistant shall release a form connected to the backend for the negotiation.
+
+Once the final Agreement rates are received from all vendors, they are compiled together and one or more Agreements out of all the received Agreements are selected by the Procurement Assistant.
+
+
+# TECH STAKED INVOVLED:
+
+NODE JS-Backend
+MY SQL- Database
+HTML- For the Skeleton of the Web Application
+CSS- For the Design
+JAVA SCRIPT-For The Get and Post Requests
