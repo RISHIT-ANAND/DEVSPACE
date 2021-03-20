@@ -19,15 +19,15 @@ The current process of agreement renewal and settlement takes a long time to rea
 
 # WORKING OF GoComet DIGITAL PROCUREMENT ASSISTANT:
 
-The Procurement Assistant identifies all Agreements which will be expiring in the next 15 days.
+* The Procurement Assistant identifies all Agreements which will be expiring in the next 15 days.
 
-Procurement Assistant Floats a new RFP among the vendors through email with a deadline. The enitre process shall be done in the backend.
+* Procurement Assistant Floats a new RFP among the vendors through email with a deadline. The enitre process shall be done in the backend.
 
-Then the vendors respond to the RFP by replying to the email with an agreement.
+* Then the vendors respond to the RFP by replying to the email with an agreement.
 
-Upon receiving the Agreement, the assistant has an option to negotiate by submitting a counter/target price per unit. Our assistant shall release a form connected to the backend for the negotiation.
+* Upon receiving the Agreement, the assistant has an option to negotiate by submitting a counter/target price per unit. Our assistant shall release a form connected to the backend for the negotiation.
 
-Once the final Agreement rates are received from all vendors, they are compiled together and one or more Agreements out of all the received Agreements are selected by the Procurement Assistant.
+* Once the final Agreement rates are received from all vendors, they are compiled together and one or more Agreements out of all the received Agreements are selected by the Procurement Assistant.
 
 
 # TECH STAKED INVOVLED:
