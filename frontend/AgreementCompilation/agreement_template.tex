@@ -1,0 +1,48 @@
+\documentclass[a4paper]{article}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\graphicspath{ {.} }
+
+\begin{document}
+\begin{figure}[t]
+\centering
+\includegraphics[scale=0.10]{logo}
+\end{figure}
+
+\begin{center}
+	\bf{PURCHASE AGREEMENT}
+\end{center}
+
+\begin{flushright}
+	\it{Date:}
+\normalfont{%(agreementdate)s \\}
+
+	\it{Agreement Number:}
+\normalfont{%(agreement)s \\}
+\end{flushright}
+
+\bf{CLAUSES}
+
+\normalfont{1. This is a formal agreement between }
+\bf{%(vendor)s}
+	\normalfont{("Vendor") and Cadbury's Limited ("Buyer").}
+
+2. This agreement indicates that the Vendor wiall provide the Buyer with 
+\bf{%(product)s}
+	\normalfont{at the negotiated unit price of} 
+\bf{\$%(price)s.}
+
+\normalfont{3. Unless otherwise negotiated by the buyer and the supplier, this agreement shall stand valid until }
+\bf{%(expiry)s.}
+
+\normalfont{}
+4. \lipsum[1]
+
+5. \lipsum[2]
+
+6. \lipsum[3]
+
+7. \lipsum[4]
+
+8.  "TSA Logo" by Will Imholte is licensed with CC BY 2.0. To view a copy of this license, visit https://creativecommons.org/licenses/by/2.0/ 
+\end{document}
