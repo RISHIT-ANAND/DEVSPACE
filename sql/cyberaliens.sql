@@ -37,7 +37,7 @@ CREATE TABLE `Agreement` (
   KEY `productid` (`productid`),
   CONSTRAINT `Agreement_ibfk_1` FOREIGN KEY (`vendorid`) REFERENCES `Vendor` (`vendorid`),
   CONSTRAINT `Agreement_ibfk_2` FOREIGN KEY (`productid`) REFERENCES `Product` (`productid`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,7 +46,7 @@ CREATE TABLE `Agreement` (
 
 LOCK TABLES `Agreement` WRITE;
 /*!40000 ALTER TABLE `Agreement` DISABLE KEYS */;
-INSERT INTO `Agreement` VALUES (1,1,1,'2021-03-20','2021-09-20',0,'https://sample.url',1.01,1.01),(2,2,1,'2020-12-15','2021-06-15',0,'https://sample.url',1.1,1.1),(3,3,1,'2020-10-05','2021-04-05',0,'https://sample.url',1.1,1.1),(4,4,1,'2020-03-10','2020-09-10',1,'https://sample.url',1.25,1.25),(5,5,1,'2020-04-10','2020-10-10',1,'https://sample.url',1.02,1.02),(6,6,2,'2020-10-05','2021-04-05',0,'https://sample.url',3.58,3.58),(7,7,2,'2020-01-26','2020-07-26',1,'https://sample.url',3.98,3.98),(8,8,2,'2020-12-06','2021-06-06',0,'https://sample.url',4.03,4.03),(9,9,2,'2021-01-03','2021-07-03',0,'https://sample.url',1.25,1.25),(10,10,2,'2020-10-31','2021-04-30',0,'https://sample.url',3.05,3.05),(11,11,3,'2020-10-01','2021-04-01',0,'https://sample.url',10.05,10.05),(12,12,3,'2020-12-25','2021-06-25',0,'https://sample.url',9.23,9.23),(13,13,3,'2020-11-20','2021-05-20',0,'https://sample.url',10.38,10.38),(14,14,3,'2020-12-03','2021-06-03',0,'https://sample.url',9.95,9.95),(15,15,3,'2020-09-27','2021-03-27',0,'https://sample.url',10.52,10.52);
+INSERT INTO `Agreement` VALUES (1,1,1,'2021-03-20','2021-09-20',0,'https://sample.url',1.01,1.01),(2,2,1,'2020-12-15','2021-06-15',0,'https://sample.url',1.1,1.1),(3,3,1,'2020-10-05','2021-04-05',0,'https://sample.url',1.1,1.1),(4,4,1,'2020-03-10','2020-09-10',1,'https://sample.url',1.25,1.25),(5,5,1,'2020-04-10','2020-10-10',1,'https://sample.url',1.02,1.02),(6,6,2,'2020-10-05','2021-04-05',0,'https://sample.url',3.58,3.58),(7,7,2,'2020-01-26','2020-07-26',1,'https://sample.url',3.98,3.98),(8,8,2,'2020-12-06','2021-06-06',0,'https://sample.url',4.03,4.03),(9,9,2,'2021-01-03','2021-07-03',0,'https://sample.url',1.25,1.25),(10,10,2,'2020-10-31','2021-04-30',0,'https://sample.url',3.05,3.05),(11,11,3,'2020-10-01','2021-04-01',0,'https://sample.url',10.05,10.05),(12,12,3,'2020-12-25','2021-06-25',0,'https://sample.url',9.23,9.23),(13,13,3,'2020-11-20','2021-05-20',0,'https://sample.url',10.38,10.38),(14,14,3,'2020-12-03','2021-06-03',0,'https://sample.url',9.95,9.95),(15,15,3,'2020-09-27','2021-03-27',0,'https://sample.url',10.52,10.52),(16,5,3,'2020-04-10','2020-10-10',1,'https://sample.url',10.5,10.5),(17,2,2,'2020-09-30','2021-03-30',0,'https://sample.url',3.68,3.68);
 /*!40000 ALTER TABLE `Agreement` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -110,4 +110,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-20 17:27:10
+-- Dump completed on 2021-03-20 20:06:24
