@@ -3,6 +3,9 @@ var app = express();
 const path = require('path');
 var nodemailer = require('nodemailer');
 var schedule = require('node-schedule');
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('view engine', 'ejs');
 
@@ -131,12 +134,12 @@ app.get('/:agreeId',(req,res)=>{
 });
 
 app.post('/:agreeId',(req,res)=>{
-    console.log(req.is('json'));
+    console.log(req.body);
     res.send(req.params.agreeId);
-    // connection.query(`INSERT INTO returned (vpid,agreementdate,expirydate,collect,price) VALUES(${req.params.agreeId},${req.body.fdate},${req.body.tdate},${req.body.DC},${req.body.lprice})`, (error, resultsp, fields) =>{
-    //     if (error) 
-    //     console.log(error);
-    // });
+    connection.query(`INSERT INTO returned (vpid, agreementdate, expirydate, collect, price) VALUES(${req.params.agreeId}, '${req.body.fdate}', '${req.body.tdate}', ${req.body.DC}, ${req.body.lprice})`, (error, resultsp, fields) =>{
+        if (error) 
+        console.log(error);
+    });
 });
 
 const PORT = process.env.PORT || 5001;
