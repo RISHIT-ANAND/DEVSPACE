@@ -40,7 +40,7 @@ schedule.scheduleJob('0 0 * * *', () => {
             var mailOptions = {
                 from: 'procurementassistantvit21@gmail.com',
                 to: val["email"],
-                subject: 'Hello'+val["vendorname"],
+                subject: 'Hello '+val["vendorname"],
                 text: 'Please click this link to view our initial prices https://proc-assist.herokuapp.com/'+val["vpid"]
             };  
             transporter.sendMail(mailOptions, function(error, info){
@@ -61,22 +61,6 @@ schedule.scheduleJob('0 0 * * *', () => {
 })
 connection.query('select vpid, vendorname, email from vp left join Vendor on vp.vendorid=Vendor.vendorid where Vendor.vendorid in (select vendorid from vp where productid in(select productid from Agreement where datediff(expirydate,curdate())<15))', function (error, results, fields) {
     if (error) throw error;
-    var arr=results.map((val,index)=>{
-        // var mailOptions = {
-        //     from: 'procurementassistantvit21@gmail.com',
-        //     to: val["email"],
-        //     subject: 'Hello'+val["vendorname"],
-        //     text: 'Basic mail testing'
-        //   };  
-        // transporter.sendMail(mailOptions, function(error, info){
-        // if (error) {
-        //     console.log(error);
-        // } else {
-        //     console.log('Email sent: ' + info.response);
-        // }
-        // });
-            
-    });
     sendres=results;
 });
    
@@ -122,7 +106,7 @@ app.get('/:agreeId',(req,res)=>{
     
     function sendq(){
         var dff=15;
-        connection.query(`SELECT datediff(datesent,curdate()) as dff from vp where vpid=${req.params.agreeId})`, (error, resultsp, fields) =>{
+        connection.query(`SELECT datediff(datesent,curdate()) as dff from vp where vpid=${req.params.agreeId}`, (error, resultsp, fields) =>{
             if (error) 
                 console.log(error);
             else
