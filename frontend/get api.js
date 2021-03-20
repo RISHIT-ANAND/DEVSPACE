@@ -15,3 +15,13 @@ var client = new HttpClient();
 client.get('http://some/thing?with=arguments', function(response) {
     // do something with response
 });
+
+
+//or use this:
+
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://reqres.in/api/products/3", true);
+xhr.onload = function(){
+    console.log(xhr.responseText);
+};
+xhr.send(); 
