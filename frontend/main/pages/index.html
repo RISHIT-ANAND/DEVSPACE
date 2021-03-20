@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="frontted">
+    <title>Admin Dashboard Layout - Devspace</title>
+
+    <!-- BEGIN: CSS Assets -->
+    <link rel="stylesheet" href="../public/css/app.css" />
+    <link type="text/css" href="../public/css/vendor-materialicons.css" rel="stylesheet">
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" href="../public/vendor/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
+
+
+  <!-- Vector Maps -->
+<link type="text/css" href="../public/vendor/jqvmap/dist/jqvmap.min.css" rel="stylesheet">
+
+<!-- Flatpickr -->
+<link type="text/css" href="../public/css/vendor-flatpickr.css" rel="stylesheet">
+<link type="text/css" href="../public/css/vendor-flatpickr-airbnb.css" rel="stylesheet">
+
+
+</head>
+<body class="bg-gray-light layout-default">
+
+
+
+
+
+
+
+
+  <!-- NAVBAR -->
+
+    <header class="lg:py-0 bg-white shadow-xl"   data-aos="fade-down">
+  <div class="max-w-6xl  mx-auto px-8 flex flex-wrap items-center">
+     <div class="items-center">
+      <a href="index.html" class="flex items-center text-xl w-sidebar mr-4 hover:no-underline">
+          <span class="mr-1 -mt-1 text-primary">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 263 125" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Profile-Photo" transform="translate(-67.000000, -117.000000)">
+                        <path d="M154.333333,130.8 C109.355556,130.8 81.2444444,153.244444 70,198.133333 C86.8666667,175.688889 106.544444,167.272222 129.033333,172.883333 C141.864493,176.084784 151.035588,185.374914 161.186823,195.658833 C177.723652,212.411117 196.862946,231.8 238.666667,231.8 C283.644444,231.8 311.755556,209.355556 323,164.466667 C306.133333,186.911111 286.455556,195.327778 263.966667,189.716667 C251.135507,186.515216 241.964412,177.225086 231.813177,166.941167 C215.276348,150.188883 196.137054,130.8 154.333333,130.8 Z" id="Path" fill="#494949"></path>
+                        <path d="M151.333333,140.8 C106.355556,140.8 78.2444444,163.244444 67,208.133333 C83.8666667,185.688889 103.544444,177.272222 126.033333,182.883333 C138.864493,186.084784 148.035588,195.374914 158.186823,205.658833 C174.723652,222.411117 193.862946,241.8 235.666667,241.8 C280.644444,241.8 308.755556,219.355556 320,174.466667 C303.133333,196.911111 283.455556,205.327778 260.966667,199.716667 C248.135507,196.515216 238.964412,187.225086 228.813177,176.941167 C212.276348,160.188883 193.137054,140.8 151.333333,140.8 Z" id="Path-Copy-2" fill="#494949"></path>
+                        <path d="M159.666667,120.8 C116.111111,120.8 88.8888888,142.577778 78,186.133333 C94.3333333,164.355556 113.388889,156.188889 135.166667,161.633333 C147.592098,164.739691 156.473198,173.753876 166.303445,183.732333 C182.317371,199.987025 200.851469,218.8 241.333333,218.8 C284.888888,218.8 312.111112,197.022222 323,153.466667 C306.666667,175.244444 287.611112,183.411111 265.833333,177.966667 C253.407902,174.860309 244.526802,165.846124 234.696555,155.867667 C218.682629,139.612975 200.148531,120.8 159.666667,120.8 Z" id="Path-Copy" stroke="#494949" stroke-width="6" fill="#FFFFFF"></path>
+                    </g>
+                </g>
+            </svg>
+          </span>
+          <span><strong>Devspace</strong></span>
+      </a>
+    </div>
+
+    <div class="flex-1 flex justify-between">
+      <!-- This is an example component -->
+      <div class="relative text-gray-darker hidden lg:flex flex-grow">
+          <input
+            type="search" name="search" placeholder="Search">
+          <button type="submit" class="absolute right-0 top-0 mt-3 mr-4">
+            <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+              viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve"
+              width="512px" height="512px">
+              <path
+                d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
+            </svg>
+          </button>
+        </div>
+    </div>
+
+    <label data-toggle="sidebar"  class="pointer-cursor lg:hidden block"><svg class="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg></label>
+    <input class="hidden" type="checkbox" id="menu-toggle" />
+
+    <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
+
+        <ul class="lg:flex items-center justify-between text-md text-gray-900 font-semibold pt-4 lg:pt-0">
+          <li class="relative inline-block text-left">
+            <button class="flex items-center lg:p-4 py-3 px-0 block hover:text-blue-600 font-semibold" id="options-menue1" aria-haspopup="true" aria-expanded="true">
+              Features
+            </button>
+
+
+          </li>
+          <li>
+            <a href="#" class="flex items-center lg:p-4 py-3 px-0 block hover:text-blue-600 font-semibold" id="options-menue" aria-haspopup="true" aria-expanded="true">
+              Settings
+            </a>
+          </li>
+          <li>
+          <li>
+            <a href="#" class="flex items-center lg:p-4 py-3 px-0 block hover:text-blue-600 font-semibold" id="options-menue2" aria-haspopup="true" aria-expanded="true">
+              Sign Up
+            </a>
+          </li>
+
+          <li class="mr-4 text-muted">or</li>
+          <li>
+            <a class="btn btn-success" href="login.html">Login</a>
+          </li>
+        </ul>
+
+
+    </div>
+  </div>
+</header>
+    <div class="mt-0">
+      <header class="lg:py-0 bg-primary text-white shadow-md lg:sticky lg:top-0 z-1000"   data-aos="fade-down">
+  <div class="max-w-6xl  mx-auto px-8 flex flex-wrap items-center">
+    <div class="w-full items-center">
+
+
+
+  <label data-toggle="sidebar"  class="pointer-cursor lg:hidden block"><svg class="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg></label>
+
+  <div class="hidden lg:flex lg:items-center lg:w-auto w-full ml-auto" id="menu-forth">
+
+    <ul class="lg:flex justify-between text-md text-gray-900 font-semibold">
+      <li class="flex">
+        <button class="flex items-center py-3 px-4 block hover:text-blue-600 font-semibold bg-primary-darker" id="options-menu" aria-haspopup="true" aria-expanded="true">
+          <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd"></path></svg>
+          Dashboard
+        </button>
+
+      </li>
+      <li>
+        <a href="#" class="flex items-center lg:p-4 py-3 px-0 block hover:text-blue-600 font-semibold" id="options-menu1" aria-haspopup="true" aria-expanded="true">
+          <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd"></path></svg>
+          Companies
+        </a>
+      </li>
+      <li>
+        <a href="#" class="flex items-center lg:p-4 py-3 px-0 block hover:text-blue-600 font-semibold" id="options-menu2" aria-haspopup="true" aria-expanded="true">
+          <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path></svg>
+          negotiate
+        </a>
+      </li>
+        <li>
+        <a href="#" class="flex items-center lg:p-4 py-3 px-0 block hover:text-blue-600 font-semibold" id="options-menu3" aria-haspopup="true" aria-expanded="true">
+          <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path></svg>
+          Agreements
+        </a>
+      </li>
+
+    </ul>
+
+
+    <div class="ml-auto flex justify-between">
+
+      <ul class="lg:flex items-center justify-between text-md text-gray-900 font-semibold pt-4 lg:pt-0 ml-4">
+
+            <li class="flex items-center">
+              <a href="admin.html" class="flex items-center text-sm">
+                <div class="avatar w-8 h-8 mr-2">
+                  <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Avatar" class="rounded-full border-white border" style="padding:2px;">
+                </div>
+                My Dashboard
+              </a>
+            </li>
+          </ul>
+
+    </div>
+  </div>
+</div>
+  </div>
+</header>
+    </div>
+
+
+  <!-- // END HEADER -->
+
+  <!-- PAGE CONTENT -->
+
+<section class="max-w-6xl  mx-auto px-8 my-8">
+
+  <div class="card bg-primary text-white p-4 rounded">
+      <div class="grid lg:grid-cols-3 gap-4">
+        <div class="leading-none m-4 text-center card bg-white rounded px-4 py-3 text-gray-darker">
+        <h2 class="font-normal text-lg mb-2">Under negotiation</h2>
+        <h4 class="text-3xl font-semibold text-primary">12345</h4>
+      </div>
+       <div class="leading-none m-4 text-center card bg-white rounded px-4 py-3 text-gray-darker">
+        <h2 class="font-normal text-lg mb-2">Vendor Agreed</h2>
+        <h4 class="text-3xl font-semibold text-success">21,229</h4>
+      </div>
+        <div class="leading-none m-4 text-center card bg-white rounded px-4 py-3 text-gray-darker">
+        <h2 class="font-normal text-lg mb-2">Soon Expiring</h2>
+        <h4 class="text-3xl font-semibold text-danger">12</h4>
+      </div>
+      </div>
+    </div>
+
+
+<div class="lg:flex">
+  <div class="lg:w-2/3 lg:mr-2">
+    <div class="card">
+      <div class="card-header card-header-large bg-white">
+        <h4 class="card-header__title">Will expire soon</h4>
+      </div>
+      <div class="overflow-x-scroll lg:overflow-hidden">
+        <table class="table table-list w-full table-striped-primary">
+          <tbody>
+
+              <tr>
+                <td style="width:80px">
+                  <div class="bg-primary text-white w-12 h-12 rounded-full inline-flex items-center align-middle justify-center font-bold text-4xl mx-4">
+                    <i class="material-icons">email</i>
+                  </div>
+                </td>
+                <td>
+                    <a href="" class="font-bold hover:text-primary text-sm">  Jenell D. Matney</a>
+
+
+                </td>
+                <td class="">
+                  <div class="flex items-center">
+
+                  <i class="material-icons mr-2 text-muted">business</i><a href="#" class="text-gray-dark"> Jim &amp; Car Ent</a>
+                  </div>
+                </td>
+                <td>
+                  <img src="../public/vendor/svg-country-flags/png250px/us.png" alt="" class="rounded-sm w-6">
+                </td>
+
+                <td>
+                  <div class="flex items-center">
+                  <span class=" mr-1 text-xs font-semibold text-warning">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                    </span>
+                    <span class=" mr-1 text-xs font-semibold text-warning">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                    </span>
+                    <span class=" mr-1 text-xs font-semibold text-warning">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                    </span>
+                    <span class=" mr-1 text-xs font-semibold text-warning">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                    </span>
+                    <span class=" mr-1 text-xs font-semibold text-muted">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                    </span>
+
+                  </div>
+                </td>
+                <td>
+                  <a href="#" class="text-primary text-sm font-bold">#design</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="width:80px">
+                  <div class="bg-primary text-white w-12 h-12 rounded-full inline-flex items-center align-middle justify-center font-bold text-4xl mx-4">
+                    <i class="material-icons">monetization_on</i>
+                  </div>
+                </td>
+                <td>
+                    <a href="" class="font-bold hover:text-primary text-sm">  Sherri J. Cardenas</a>
+
+
+                </td>
+                <td class="">
+                  <div class="flex items-center">
+
+                  <i class="material-icons mr-2 text-muted">business</i><a href="#" class="text-gray-dark"> Shoe LTD</a>
+                  </div>
+                </td>
+                <td>
+                  <img src="../public/vendor/svg-country-flags/png250px/ro.png" alt="" class="rounded-sm w-6">
+                </td>
+
+                <td>
+                  <div class="flex items-center">
+                  <span class=" mr-1 text-xs font-semibold text-warning">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                    </span>
+                    <span class=" mr-1 text-xs font-semibold text-warning">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                    </span>
+                    <span class=" mr-1 text-xs font-semibold text-warning">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                    </span>
+                    <span class=" mr-1 text-xs font-semibold text-warning">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                    </span>
+                    <span class=" mr-1 text-xs font-semibold text-muted">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                    </span>
+
+                  </div>
+                </td>
+                <td>
+                  <a href="#" class="text-primary text-sm font-bold">#design</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="width:80px">
+                  <div class="bg-primary text-white w-12 h-12 rounded-full inline-flex items-center align-middle justify-center font-bold text-4xl mx-4">
+                    <i class="material-icons">monetization_on</i>
+                  </div>
+                </td>
+                <td>
+                    <a href="" class="font-bold hover:text-primary text-sm">  Joseph S. Ferland</a>
+
+
+                </td>
+                <td class="">
+                  <div class="flex items-center">
+
+                  <i class="material-icons mr-2 text-muted">business</i><a href="#" class="text-gray-dark"> RODE LLC</a>
+                  </div>
+                </td>
+                <td>
+                  <img src="../public/vendor/svg-country-flags/png250px/gb.png" alt="" class="rounded-sm w-6">
+                </td>
+
+                <td>
+                  <div class="flex items-center">
+                  <span class=" mr-1 text-xs font-semibold text-warning">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                    </span>
+                    <span class=" mr-1 text-xs font-semibold text-warning">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                    </span>
+                    <span class=" mr-1 text-xs font-semibold text-warning">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                    </span>
+                    <span class=" mr-1 text-xs font-semibold text-warning">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                    </span>
+                    <span class=" mr-1 text-xs font-semibold text-muted">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                    </span>
+
+                  </div>
+                </td>
+                <td>
+                  <a href="#" class="text-primary text-sm font-bold">#design</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="bg-primary text-white w-12 h-12 rounded-full inline-flex items-center align-middle justify-center font-bold text-4xl mx-4">
+                    <i class="material-icons">description</i>
+                  </div>
+                </td>
+                <td>
+                    <a href="" class="font-bold hover:text-primary text-sm">  Bryan K. Davis</a>
+
+
+                </td>
+                <td class="">
+                  <div class="flex items-center">
+
+                  <i class="material-icons mr-2 text-muted">business</i><a href="#" class="text-gray-dark"> Bavis Store Ltd</a>
+                  </div>
+                </td>
+                <td>
+                  <img src="../public/vendor/svg-country-flags/png250px/fr.png" alt="" class="rounded-sm w-6">
+                </td>
+
+                <td>
+                  <div class="flex items-center">
+                  <span class=" mr-1 text-xs font-semibold text-warning">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                    </span>
+                    <span class=" mr-1 text-xs font-semibold text-warning">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                    </span>
+                    <span class=" mr-1 text-xs font-semibold text-warning">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                    </span>
+                    <span class=" mr-1 text-xs font-semibold text-warning">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                    </span>
+                    <span class=" mr-1 text-xs font-semibold text-muted">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                    </span>
+
+                  </div>
+                </td>
+                <td>
+                  <a href="#" class="text-primary text-sm font-bold">#design</a>
+                </td>
+              </tr>
+
+            </tbody>
+        </table>
+       </div>
+    </div>
+  </div>
+</div>
+
+</section>
+
+  <!-- // END PAGE CONTENT -->
+
+   <!-- FOOTER -->
+
+    <div class="pt-8 bg-white mt-8">
+
+        <div class="max-w-6xl  mx-auto px-8">
+        <div class="lg:flex -mx-2">
+          <div class="lg:w-2/5 px-2 md:pr-4 mb-4">
+            <div class="font-bold text-lg mb-4 flex items-center">
+              <div class="mr-2">
+                <span class=" text-primary"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path></svg></span>
+              </div>
+            <span> DevSpace</span>
+            </div>
+            <p class="text-gray-dark">ABC Company Details.</p>
+          </div>
+          <div class="w-3/5 px-2">
+            <div class="lg:flex -mx-2">
+              <div class="lg:w-1/3 px-2 mb-4">
+                <div class="text-lg font-bold mb-4">Useful</div>
+                <ul class="list-none">
+                  <li class="mb-1"><a href="#" class="text-gray-dark hover:text-blue-500 font-semibold text-sm">Account</a></li>
+                  </ul>
+              </div>
+              <div class="lg:w-1/3 px-2 mb-4">
+                <div class="text-lg font-bold mb-4">Staff</div>
+                <ul class="list-none">
+                  <li class="mb-1"><a href="#" class="text-gray-dark hover:text-blue-500 font-semibold text-sm">Something</a></li>
+                  </ul>
+
+              </div>
+              <div class="lg:w-1/3 px-2 mb-4">
+                <div class="text-lg font-bold mb-4">Get in touch</div>
+                <ul class="list-none">
+                  <li class="mb-1"><a href="" class="text-gray-dark hover:text-blue-500 font-semibold text-sm">Contact us</a></li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- // END FOOTER -->
+
+  <script src="../public/vendor/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+
+  <script src="../public/vendor/dom-factory/dist/dom-factory.js"></script>
+  <script src="../public/vendor/material-design-kit/dist/material-design-kit.js"></script>
+
+  <script src="../public/vendor/jquery/dist/jquery.js"></script>
+
+
+  <script src="../public/js/app.js"></script>
+  <!-- // END FOOTER -->
+
+
+
+  <!-- Chart.js -->
+<script src="../public/vendor/chart.js/dist/Chart.min.js"></script>
+<script src="../public/js/plugins/chartjs-rounded-bar.js"></script>
+<script src="../public/js/plugins/charts.js"></script>
+
+<!-- Vector Maps -->
+<script src="../public/vendor/jqvmap/dist/jquery.vmap.min.js"></script>
+<script src="../public/vendor/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+
+<script src="../public/js/plugins/vector-maps.js"></script>
+
+<!-- Flatpickr -->
+<script src="../public/vendor/flatpickr/dist/flatpickr.min.js"></script>
+<script src="../public/js/plugins/flatpickr.js"></script>
+
+<script src="../public/js/pages/dashboard.js"></script>
+
+
+</body>
+
+</html>
