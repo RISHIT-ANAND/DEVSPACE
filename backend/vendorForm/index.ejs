@@ -30,7 +30,7 @@
 
 	<div class="container-contact100">
 		<div class="wrap-contact100">
-			<form action="/"+agreeId class="contact100-form validate-form" method="post">
+			<form action="/submit"+ class="contact100-form validate-form" method="post">
 				<span class="contact100-form-title">
 					Hello <%= name %>
 				</span>
@@ -57,9 +57,9 @@
 					<span class="label-input100">Delivery Choice</span>
 					<div>
 						<select class="selection-2" name="DC">
-							<option>Select one opction</option>
-							<option>You will deliver</option>
-							<option>We pick up from you</option>
+							<option value="-1">Select one opction</option>
+							<option value="0">You will deliver</option>
+							<option value="1">We pick up from you</option>
 						</select>
 					</div>
 					<span class="focus-input100"></span>

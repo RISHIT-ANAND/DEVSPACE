@@ -87,7 +87,7 @@ app.get('/:agreeId',(req,res)=>{
                 console.log(error);
             else if(results[0]!=undefined){
                 results = JSON.parse(JSON.stringify(results));
-                console.log(results[0]["vendorname"]);
+                //console.log(results[0]["vendorname"]);
                 sendnames["vendorname"]=results[0]["vendorname"];
             }
             else{
@@ -102,7 +102,7 @@ app.get('/:agreeId',(req,res)=>{
             console.log(error);
             else if(resultsp[0]!=undefined){
                 resultsp=JSON.parse(JSON.stringify(resultsp));
-                console.log(resultsp[0]["productname"]);
+                //console.log(resultsp[0]["productname"]);
                 sendnames["productname"]=resultsp[0]["productname"];
             }
             else{
@@ -131,7 +131,12 @@ app.get('/:agreeId',(req,res)=>{
 });
 
 app.post('/:agreeId',(req,res)=>{
-    
+    console.log(req.is('json'));
+    res.send(req.params.agreeId);
+    // connection.query(`INSERT INTO returned (vpid,agreementdate,expirydate,collect,price) VALUES(${req.params.agreeId},${req.body.fdate},${req.body.tdate},${req.body.DC},${req.body.lprice})`, (error, resultsp, fields) =>{
+    //     if (error) 
+    //     console.log(error);
+    // });
 });
 
 const PORT = process.env.PORT || 5001;
