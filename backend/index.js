@@ -1,7 +1,14 @@
 var express = require('express');
 var app = express();
+const path = require('path');
 var nodemailer = require('nodemailer');
 var schedule = require('node-schedule');
+
+app.set('view engine', 'ejs');
+
+app.engine('html', require('ejs').renderFile);
+
+app.use('/:agreeId',express.static(path.join(__dirname, 'vendorForm')));
 
 var transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -97,7 +104,7 @@ app.get('/:agreeId',(req,res)=>{
     }
     
     function sendq(){
-        res.send(sendnames);
+        res.render(__dirname + "/vendorForm", {name:sendnames["vendorname"]});
     }
     function executeAsynchronously(functions, timeout) {
         for(var i = 0; i < functions.length; i++) {

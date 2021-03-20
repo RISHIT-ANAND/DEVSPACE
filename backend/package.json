@@ -10,6 +10,7 @@
   "author": "Sharath Thomas",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
     "mysql": "^2.18.1",
     "node-schedule": "^2.0.0"
