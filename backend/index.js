@@ -80,8 +80,9 @@ app.get('/:agreeId',(req,res)=>{
           timeout*=5;
         }
       }
-    executeAsynchronously(
-        [vendorq, productq, sendq], 20);
+    if(!isNaN(req.params.agreeId))
+        executeAsynchronously(
+            [vendorq, productq, sendq], 20);
     
     
 });
