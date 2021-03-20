@@ -18,6 +18,30 @@ var connection = mysql.createConnection({
 });
 connection.connect();
 var sendres=null;
+import schedule from 'node-schedule'
+
+schedule.scheduleJob('0 0 * * *', () => { 
+    connection.query('select agreementid, vendorname, email from Agreement left join Vendor on Agreement.vendorid=Vendor.vendorid where Vendor.vendorid in (select vendorid from Agreement where productid in(select productid from Agreement where datediff(expirydate,curdate())<15))', function (error, results, fields) {
+        if (error) throw error;
+        var arr=results.map((val,index)=>{
+            var mailOptions = {
+                from: 'procurementassistantvit21@gmail.com',
+                to: val["email"],
+                subject: 'Hello'+val["vendorname"],
+                text: 'Please click this link to view our initial prices https://proc-assist.herokuapp.com/'+val["agreementid"]
+            };  
+            transporter.sendMail(mailOptions, function(error, info){
+            if (error) {
+                console.log(error);
+            } else {
+                console.log('Email sent: ' + info.response);
+            }
+            });
+                
+        });
+        sendres=results;
+    }); 
+})
 connection.query('SELECT vendorname, email from Vendor where vendorid in (select vendorid from Agreement where productid in(select productid from Agreement where datediff(expirydate,curdate())<15))', function (error, results, fields) {
     if (error) throw error;
     var arr=results.map((val,index)=>{
