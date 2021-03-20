@@ -11,10 +11,10 @@ var transporter = nodemailer.createTransport({
 });
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
-    host     : 'localhost',
-    user     : 'thesct22',
-    password : 'Sharath@22',
-    database : 'cyberaliens'
+    host     : 'remotemysql.com',
+    user     : 'cc4mxFSMWm',
+    password : '8NmwE8H5Sh',
+    database : 'cc4mxFSMWm'
 });
 connection.connect();
 var sendres=null;
@@ -81,7 +81,7 @@ app.get('/:agreeId',(req,res)=>{
         }
       }
     executeAsynchronously(
-        [vendorq, productq, sendq], 10);
+        [vendorq, productq, sendq], 20);
     
     
 });
