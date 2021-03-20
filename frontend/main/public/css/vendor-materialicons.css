@@ -1,0 +1,77 @@
+/* SET TAILWIND COLORS VARIABLES */
+
+:root {
+  --color-black: #000000;
+  --color-darker: rgba(0, 0, 0, 0.24);
+  --color-light: #939FAD;
+  --color-white: #ffffff;
+  --color-primary: #1377c9;
+  --color-primary-light: #d0e4f4;
+  --color-primary-darker: #0a3e69;
+  --color-secondary: #262f36;
+  --color-secondary-light: #d4d5d7;
+  --color-secondary-darker: #14181c;
+  --color-success: #17b15c;
+  --color-success-light: #d1efde;
+  --color-success-darker: #0c5c30;
+  --color-warning: #FFB905;
+  --color-warning-light: #fcf4db;
+  --color-warning-darker: #7d6928;
+  --color-danger: #bb3434;
+  --color-danger-light: #f1d6d6;
+  --color-danger-darker: #611b1b;
+  --color-info: #13c0c9;
+  --color-info-light: #d0f2f4;
+  --color-info-darker: #0a6469;
+  --color-muted: #cccccc;
+  --color-gray-darker: #262626;
+  --color-gray-dark: #888888;
+  --color-dark: #262626;
+  --color-gray-light: #f9f9f9;
+  --color-link: #3687e4;
+  --color-border-color: #efefef;
+  /* ... */
+}
+
+.border-default {
+  border-color: #efefef;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  src: url("../vendor/material-design-icons-iconfont/dist/fonts/MaterialIcons-Regular.eot");
+
+  /* For IE6-8 */
+
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url("../vendor/material-design-icons-iconfont/dist/fonts/MaterialIcons-Regular.woff2") format("woff2"), url("../vendor/material-design-icons-iconfont/dist/fonts/MaterialIcons-Regular.woff") format("woff"), url("../vendor/material-design-icons-iconfont/dist/fonts/MaterialIcons-Regular.ttf") format("truetype");
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/*# sourceMappingURL=maps/vendor-materialicons.css.map */

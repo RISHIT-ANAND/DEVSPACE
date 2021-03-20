@@ -1,0 +1,108 @@
+/* SET TAILWIND COLORS VARIABLES */
+
+:root {
+  --color-black: #000000;
+  --color-darker: rgba(0, 0, 0, 0.24);
+  --color-light: #939FAD;
+  --color-white: #ffffff;
+  --color-primary: #1377c9;
+  --color-primary-light: #d0e4f4;
+  --color-primary-darker: #0a3e69;
+  --color-secondary: #262f36;
+  --color-secondary-light: #d4d5d7;
+  --color-secondary-darker: #14181c;
+  --color-success: #17b15c;
+  --color-success-light: #d1efde;
+  --color-success-darker: #0c5c30;
+  --color-warning: #FFB905;
+  --color-warning-light: #fcf4db;
+  --color-warning-darker: #7d6928;
+  --color-danger: #bb3434;
+  --color-danger-light: #f1d6d6;
+  --color-danger-darker: #611b1b;
+  --color-info: #13c0c9;
+  --color-info-light: #d0f2f4;
+  --color-info-darker: #0a6469;
+  --color-muted: #cccccc;
+  --color-gray-darker: #262626;
+  --color-gray-dark: #888888;
+  --color-dark: #262626;
+  --color-gray-light: #f9f9f9;
+  --color-link: #3687e4;
+  --color-border-color: #efefef;
+  /* ... */
+}
+
+.border-default {
+  border-color: #efefef;
+}
+
+.flatpickr-calendar {
+  width: 307.875px;
+}
+
+.dayContainer {
+  padding: 0;
+  border-right: 0;
+}
+
+span.flatpickr-day, span.flatpickr-day.prevMonthDay, span.flatpickr-day.nextMonthDay {
+  border-radius: 0 !important;
+  border: 1px solid #e9e9e9;
+  max-width: none;
+  border-right-color: transparent;
+}
+
+span.flatpickr-day:nth-child(n+8), span.flatpickr-day.prevMonthDay:nth-child(n+8), span.flatpickr-day.nextMonthDay:nth-child(n+8) {
+  border-top-color: transparent;
+}
+
+span.flatpickr-day:nth-child(7n-6), span.flatpickr-day.prevMonthDay:nth-child(7n-6), span.flatpickr-day.nextMonthDay:nth-child(7n-6) {
+  border-left: 0;
+}
+
+span.flatpickr-day:nth-child(n+36), span.flatpickr-day.prevMonthDay:nth-child(n+36), span.flatpickr-day.nextMonthDay:nth-child(n+36) {
+  border-bottom: 0;
+}
+
+span.flatpickr-day:nth-child(-n+7), span.flatpickr-day.prevMonthDay:nth-child(-n+7), span.flatpickr-day.nextMonthDay:nth-child(-n+7) {
+  margin-top: 0;
+}
+
+span.flatpickr-day.today:not(.selected), span.flatpickr-day.prevMonthDay.today:not(.selected), span.flatpickr-day.nextMonthDay.today:not(.selected) {
+  border-color: #e9e9e9;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: #F64747;
+}
+
+span.flatpickr-day.today:not(.selected):hover, span.flatpickr-day.prevMonthDay.today:not(.selected):hover, span.flatpickr-day.nextMonthDay.today:not(.selected):hover {
+  border: 1px solid #F64747;
+}
+
+span.flatpickr-day.startRange, span.flatpickr-day.endRange, span.flatpickr-day.prevMonthDay.startRange, span.flatpickr-day.prevMonthDay.endRange, span.flatpickr-day.nextMonthDay.startRange, span.flatpickr-day.nextMonthDay.endRange {
+  border-color: #4f99ff;
+}
+
+span.flatpickr-day.today, span.flatpickr-day.selected, span.flatpickr-day.prevMonthDay.today, span.flatpickr-day.prevMonthDay.selected, span.flatpickr-day.nextMonthDay.today, span.flatpickr-day.nextMonthDay.selected {
+  z-index: 2;
+}
+
+.rangeMode .flatpickr-day {
+  margin-top: -1px;
+}
+
+.flatpickr-weekwrapper .flatpickr-weeks {
+  box-shadow: none;
+}
+
+.flatpickr-weekwrapper span.flatpickr-day {
+  border: 0;
+  margin: -1px 0 0 -1px;
+}
+
+.hasWeeks .flatpickr-days {
+  border-right: 0;
+}
+
+/*# sourceMappingURL=maps/vendor-flatpickr-airbnb.css.map */
