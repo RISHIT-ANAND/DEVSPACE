@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var nodemailer = require('nodemailer');
+var schedule = require('node-schedule');
 
 var transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -10,15 +11,15 @@ var transporter = nodemailer.createTransport({
     }
 });
 var mysql      = require('mysql');
-var connection = mysql.createConnection({
+var connection = mysql.createPool({
     host     : 'remotemysql.com',
     user     : 'cc4mxFSMWm',
     password : '8NmwE8H5Sh',
     database : 'cc4mxFSMWm'
 });
-connection.connect();
+//connection.connect();
 var sendres=null;
-import schedule from 'node-schedule'
+
 
 schedule.scheduleJob('0 0 * * *', () => { 
     connection.query('select agreementid, vendorname, email from Agreement left join Vendor on Agreement.vendorid=Vendor.vendorid where Vendor.vendorid in (select vendorid from Agreement where productid in(select productid from Agreement where datediff(expirydate,curdate())<15))', function (error, results, fields) {
@@ -106,7 +107,7 @@ app.get('/:agreeId',(req,res)=>{
       }
     if(!isNaN(req.params.agreeId))
         executeAsynchronously(
-            [vendorq, productq, sendq], 20);
+            [vendorq, productq, sendq], 30);
     
     
 });
