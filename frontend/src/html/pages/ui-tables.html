@@ -1,0 +1,209 @@
+---
+title: Tailwind CSS Table Design
+slug: ui-tables
+---
+{% extends "../layouts/admin.html" %}
+
+{% set list_items = [{
+  avatar: "assets/images/256_rsz_1andy-lee-642320-unsplash.jpg",
+  name: "Jenell D. Matney",
+  company: "Jim & Car Ent",
+  date: "4 days ago",
+  amount: "$573",
+  icon: "monetization_on",
+  icon_bg: "bg-purple",
+  country: "us",
+  message: "Confirmation required for design"
+}, {
+  avatar: "assets/images/256_daniel-gaffey-1060698-unsplash.jpg",
+  name: "Sherri J. Cardenas", 
+  company: "Shoe LTD",
+  date: "3 days ago",
+  amount: "$612",
+  icon: "email",
+  icon_bg: "bg-teal",
+  country: "ro",
+  message: "Improve spacings on Projects page"
+}, {
+  avatar: "assets/images/256_jeremy-banks-798787-unsplash.jpg",
+  name: "Joseph S. Ferland", 
+  company: "RODE LLC",
+  date: "2 days ago",
+  amount: "$244",
+  icon: "monetization_on",
+  icon_bg: "",
+  country: "gb",
+  message: "You unlocked a new Badge"
+}, {
+  avatar: "assets/images/256_joao-silas-636453-unsplash.jpg",
+  name: "Bryan K. Davis", 
+  company: "Bavis Store Ltd",
+  date: "1 day ago",
+  amount: "$664",
+  icon: "monetization_on",
+  icon_bg: "",
+  country: "fr",
+  message: "Meeting on Friday"
+}, {
+  avatar: "assets/images/256_michael-dam-258165-unsplash.jpg",
+  name: "Kaci M. Langston", 
+  company: "ACME Enterprise",
+  date: "just now",
+  amount: "$631",
+  icon: "description",
+  icon_bg: "",
+  country: "es",
+  message: "Design a new Brochure"
+}] 
+%}
+
+{% block content %}
+<section class="max-w-6xl  mx-auto px-4">
+  <h1 class="my-8">Tables</h1>
+    <!-- COL -->
+    <div class="card">
+      <div class="overflow-x-scroll lg:overflow-hidden">
+      <table class="table table-sm table-border rounded">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="text-center">#</th>
+            <th>Client</th>
+            <th>Date</th>
+            <th>Message</th>
+            <th>Status</th>
+            <th class="text-right">Amount</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for i in [0,1,2,3] %}
+        <tr>
+          <td class="">
+            <input type="checkbox" class="w-4 h-4 m-1 inline-flex">
+          </td>
+          <td class="text-center">
+            <i class="material-icons text-muted" style="font-size: 20px; vertical-align:middle">{{ list_items[i+1].icon }}</i> 
+          </td>
+          <td>
+            <a href="#" class="flex items-center text-primary">  
+              <div class="avatar w-6 mr-2">
+                  <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Avatar" class="rounded-full">
+              </div>
+              {{ list_items[i+1].name }}
+            </a>
+            </td>
+          <td class="text-sm">{{ list_items[i+1].date }}</td>
+          <td class=" text-gray-dark">{{ list_items[i+1].message }}</td>
+          <td class="">
+            <span class="badge badge-soft-success rounded">
+              PAID
+            </span>
+          </td>
+          <td class="text-right font-bold">
+            {{ list_items[i+1].amount }}
+          </td>
+          <td class="text-right">
+            <a href="#" class="btn btn-outline-primary btn-sm">Action </a>
+          </td>
+
+        </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+      <div class="pb-4">
+         <!-- This is an example component -->
+        <div class="relative text-gray-darker hidden lg:flex flex-grow">
+            <input type="search" name="search" placeholder="Search by name or company " class="pl-12">
+            <button type="submit" class="absolute left-0 top-0 mt-3 ml-4 hover:text-primary">
+              <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+                viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve"
+                width="512px" height="512px">
+                <path
+                  d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
+              </svg>
+            </button>
+          </div>
+      </div>
+      <div class="overflow-x-scroll lg:overflow-hidden">
+      <table class="table table-list w-full table-striped-primary">
+        <thead>
+          <tr>
+            <th style="width:60px;"></th>
+            <th>Name</th>
+            <th>Company</th>
+            <th>Language</th>
+            <th class="text-center" style="width: 100px">Rating</th>
+            <th>Tag</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for i in [0,1,2,3] %}
+            <tr>
+              <td>
+                <div class="bg-primary text-white w-12 h-12 rounded-full inline-flex items-center align-middle justify-center font-bold text-4xl mx-4"> 
+                  <i class="material-icons">{{ list_items[i+1].icon }}</i>
+                </div>
+              </td>
+              <td>
+                  <a href="" class="font-bold hover:text-primary text-sm">  {{ list_items[i].name }}</a>
+
+
+              </td>
+              <td class="">
+                <div class="flex items-center">
+
+                <i class="material-icons mr-2 text-muted">business</i><a href="#" class="text-gray-dark"> {{ list_items[i].company }}</a>
+                </div>
+              </td>
+              <td>
+                <img src="../public/vendor/svg-country-flags/png250px/{{ list_items[i].country }}.png" alt="" class="rounded-sm w-6">
+              </td>
+
+              <td>
+                <div class="flex items-center">
+                <span class=" mr-1 text-xs font-semibold text-warning">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
+                  </span>
+                  <span class=" mr-1 text-xs font-semibold text-warning">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
+                  </span>
+                  <span class=" mr-1 text-xs font-semibold text-warning">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
+                  </span>
+                  <span class=" mr-1 text-xs font-semibold text-warning">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
+                  </span>
+                  <span class=" mr-1 text-xs font-semibold text-muted">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
+                  </span>
+                  
+                </div>
+              </td>
+              <td>
+                <a href="#" class="text-primary text-sm font-bold">#design</a>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+      </table>
+      </div>
+      </div>
+    </div>
+  
+</section>
+{% endblock %}
+
+{% block footerScripts %}
+<script>
+  $('table tr td input').on('change', function() {
+    $(this).closest('tr').toggleClass('table-highlight');
+  });
+</script>
+{% endblock %}

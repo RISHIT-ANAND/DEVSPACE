@@ -1,0 +1,67 @@
+.card {
+  @apply bg-white shadow-xl mb-8 border border-gray-light;
+
+}
+
+.card-header {
+  @apply p-4 border-b-2 border-gray-light;
+}
+.card-header__title {
+  @apply font-bold text-lg;
+}
+.card-body {
+  @apply p-4;
+  > p {
+    @apply mb-4;
+  }
+}
+
+.card-header-tabs-basic {
+  background: $gray-light;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: flex;
+  border-top:1px solid $border-color;
+  border-bottom:1px solid $border-color;
+  > div {
+    display: flex;
+  }
+  a {
+    padding: .5rem .75rem;
+    color: rgba($body-color, .54);
+    font-weight: 600;
+    &:hover {
+      text-decoration: none;
+      color: rgba(17,43,74,.84);
+    }
+  }
+  .active {
+    color: rgba(17,43,74,.84);
+    border-bottom: 2px solid $primary;
+  }
+}
+
+
+.dashboard-area-tabs {
+  &__tab {
+    display: flex;
+    flex-direction: column;
+    &:hover {
+      text-decoration: none;
+    }
+
+    .text-label-large {
+      color: theme-color('muted-light');
+    }
+    &:not(.active) {
+      background-color: theme-color('light');
+      .text-amount {
+        color: theme-color('dark-gray');
+      }
+    }
+
+    &.active .text-label-large {
+      color: $primary;
+    }
+  }
+}

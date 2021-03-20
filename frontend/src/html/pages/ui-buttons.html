@@ -1,0 +1,178 @@
+---
+title: Tailwind Custom Buttons Design
+slug: ui-buttons
+---
+{% extends "../layouts/admin.html" %}
+
+{% block content %}
+<section class="max-w-6xl  mx-auto px-4">
+  <h1 class="my-8">Buttons</h1>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+    <!-- COL -->
+    <div class="card">
+      <div class="card-header card-header-large bg-white">
+          <h4 class="card-header__title">Default Buttons</h4>
+      </div>
+      <div class="card-body">
+          <p>Use button classes on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
+
+          <div class="button-list">
+              <button type="button" class="btn btn-primary">Primary</button>
+              <button type="button" class="btn btn-secondary">Secondary</button>
+              <button type="button" class="btn btn-success">Success</button>
+              <button type="button" class="btn btn-danger">Danger</button>
+              <button type="button" class="btn btn-warning">Warning</button>
+              <button type="button" class="btn btn-info">Info</button>
+              <button type="button" class="btn btn-light">Light</button>
+              <button type="button" class="btn btn-dark">Dark</button>
+              <button type="button" class="btn btn-link">Link</button>
+          </div>
+      </div>
+    </div>
+    <!-- COL -->
+    <!-- COL -->
+    <div class="card">
+      <div class="card-header card-header-large bg-white">
+          <h4 class="card-header__title">Button Icons</h4>
+      </div>
+      <div class="card-body">
+          <p>Add icons to any button or even use Icon-only buttons.</p>
+          <div class="button-list">
+              <button type="button" class="btn btn-light">
+                  <i class="material-icons">favorite_border</i>
+              </button>
+              <button type="button" class="btn btn-danger">
+                  <i class="material-icons">close</i>
+              </button>
+              <button type="button" class="btn btn-dark">
+                  <i class="material-icons">music_note</i>
+              </button>
+              <button type="button" class="btn btn-primary">
+                  <i class="material-icons">star</i>
+              </button>
+              <button type="button" class="btn btn-success">
+                  <i class="material-icons">thumb_up</i>
+              </button>
+              <button type="button" class="btn btn-warning">
+                  <i class="material-icons">settings</i>
+              </button>
+              <br>
+              <button type="button" class="btn btn-light">
+                  <i class="material-icons mr-1">favorite</i> Favorite
+              </button>
+              <button type="button" class="btn btn-warning">
+                  <i class="material-icons mr-1">launch</i> Launch
+              </button>
+              <button type="button" class="btn btn-info">
+                  <i class="material-icons mr-1">cloud</i> Cloud Hosting
+              </button>
+          </div>
+      </div>
+    </div>
+    <!-- COL -->
+
+    <!-- COL -->
+    <div class="card">
+      <div class="card-header card-header-large bg-white">
+          <h4 class="card-header__title">Outlined Buttons</h4>
+      </div>
+      <div class="card-body">
+          <p>Use the <code>.btn-outline-*</code> classes to create bordered buttons.</p>
+          <div class="button-list">
+              <button type="button" class="btn btn-outline-primary">Primary</button>
+              <button type="button" class="btn btn-outline-secondary">Secondary</button>
+              <button type="button" class="btn btn-outline-success">Success</button>
+              <button type="button" class="btn btn-outline-danger">Danger</button>
+              <button type="button" class="btn btn-outline-warning">Warning</button>
+              <button type="button" class="btn btn-outline-info">Info</button>
+              <button type="button" class="btn btn-outline-dark">Dark</button>
+          </div>
+      </div>
+    </div>
+    <!-- COL -->
+
+    <div class="card">
+      <div class="card-header card-header-large bg-white">
+          <h4 class="card-header__title">Button Block</h4>
+      </div>
+      <div class="card-body">
+          <p>Create block level buttons, by adding add <code>.block</code>.</p>
+          <button type="button" class="btn btn-primary block mb-2">Block Button</button>
+          <button type="button" class="btn btn-success block mb-2">Block Button</button>
+          <button type="button" class="btn btn-sm btn-info block mb-2">Block Button</button>
+      </div>
+    </div>
+    <!-- COL -->
+
+    <!-- COL -->
+
+    <div class="card">
+      <div class="card-header card-header-large bg-white">
+          <h4 class="card-header__title">Rounded Buttons</h4>
+      </div>
+      <div class="card-body">
+          <p>Add <code>rounded</code> to buttons to get large rounded corners.</p>
+          <div class="button-list">
+              <button type="button" class="btn btn-primary btn-rounded">Primary</button>
+              <button type="button" class="btn btn-secondary btn-rounded">Secondary</button>
+              <button type="button" class="btn btn-success btn-rounded">Success</button>
+              <button type="button" class="btn btn-danger btn-rounded">Danger</button>
+              <button type="button" class="btn btn-warning btn-rounded">Warning</button>
+              <button type="button" class="btn btn-info btn-rounded">Info</button>
+              <button type="button" class="btn btn-light btn-rounded">Light</button>
+              <button type="button" class="btn btn-dark btn-rounded">Dark</button>
+              <button type="button" class="btn btn-link btn-rounded">Link</button>
+          </div>
+      </div>
+    </div>
+    <!-- COL -->
+    <div class="card">
+    <div class="card-header card-header-large bg-white">
+        <h4 class="card-header__title">Button Group</h4>
+    </div>
+    <div class="card-body">
+        <p>Create a group of buttons by wrapping with <code>.btn-group</code>.</p>
+        <div class="flex">
+        <div class="flex mr-2">
+            <button type="button" class="btn btn-light">Left</button>
+            <button type="button" class="btn btn-light">Middle</button>
+            <button type="button" class="btn btn-light">Right</button>
+        </div>
+        <br>
+        <div class="flex mr-2">
+            <button type="button" class="btn btn-light">1</button>
+            <button type="button" class="btn btn-light">2</button>
+            <button type="button" class="btn btn-light">3</button>
+            <button type="button" class="btn btn-light">4</button>
+        </div>
+        <div class="flex mr-2">
+            <button type="button" class="btn btn-light">5</button>
+            <button type="button" class="btn btn-light">6</button>
+            <button type="button" class="btn btn-light">7</button>
+        </div>
+        <div class="">
+            <button type="button" class="btn btn-light">8</button>
+        </div>
+        </div>
+        <br>
+        <div class="flex mb-2">
+            <button type="button" class="btn btn-light">1</button>
+            <button type="button" class="btn btn-primary">2</button>
+            <button type="button" class="btn btn-light">3</button>
+            <div class="btn-group">
+                <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> Dropdown <span class="caret"></span> </button>
+                <!-- <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Dropdown link</a>
+                    <a class="dropdown-item" href="#">Dropdown link</a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- COL -->
+
+
+  </div>
+</section>
+
+{% endblock %}

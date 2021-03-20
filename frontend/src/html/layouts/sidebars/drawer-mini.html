@@ -1,0 +1,46 @@
+<!-- drawer -->
+<div class="mdk-drawer {{ drawerClass or '' }} js-mdk-drawer" id="default-drawer" data-align="{{ drawerAlign }}">
+  <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px">
+
+    <div class="sidebar sidebar-mini sidebar-light bg-white sidebar-left" >
+      <ul class="nav flex-column sidebar-menu mt-3" id="sidebar-mini-tabs" role="tablist">
+        <li class="sidebar-menu-item{% if dashboards_menu %} active{% endif %}" data-toggle="tooltip" data-title="Dashboards" data-placement="right" data-boundary="window">
+          <a class="sidebar-menu-button" href="#sm_dashboards" data-toggle="tab" role="tab" aria-controls="sm_dashboards" aria-selected="true">
+            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dvr</i>
+            <span class="sidebar-menu-text">Dashboard</span>
+          </a>
+        </li>
+      
+        <li class="sidebar-menu-item{% if components_menu %} active {% endif %}" data-toggle="tooltip" data-title="UI Components" data-placement="right" data-container="body" data-boundary="window">
+          <a class="sidebar-menu-button" href="#sm_components" data-toggle="tab" role="tab" aria-controls="sm_components">
+            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">list</i>
+            <span class="sidebar-menu-text">UI Components</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="sidebar sidebar-light sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+      <div class="tab-content">
+        <div class="tab-pane{% if demos_menu %} fade active show{% endif %}" id="sm_dashboards">
+          <div class="sidebar-heading">DEMOS</div>
+          <div class="sidebar-block p-0">
+            <ul class="sidebar-menu">
+              {% include '_menu.demos.html' %}  
+            </ul>
+          </div>
+        </div>
+        
+        <div class="tab-pane{% if components_menu %} fade active show{% endif %}" id="sm_components">
+          <div class="sidebar-heading">UI Components</div>
+          <div class="sidebar-block p-0">
+            {% include '_menu.components.html' %}  
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- // END drawer -->

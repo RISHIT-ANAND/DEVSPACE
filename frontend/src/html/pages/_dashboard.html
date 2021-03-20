@@ -1,0 +1,445 @@
+
+
+{% set chat = [{
+  avatar: "assets/images/256_rsz_1andy-lee-642320-unsplash.jpg",
+  name: "Jenell D. Matney", 
+  date: "4 days ago"
+}, {
+  avatar: "assets/images/256_daniel-gaffey-1060698-unsplash.jpg",
+  name: "Sherri J. Cardenas", 
+  date: "3 days ago"
+}, {
+  avatar: "assets/images/256_jeremy-banks-798787-unsplash.jpg",
+  name: "Joseph S. Ferland", 
+  date: "2 days ago"
+}, {
+  avatar: "assets/images/256_joao-silas-636453-unsplash.jpg",
+  name: "Bryan K. Davis", 
+  date: "1 day ago"
+}, {
+  avatar: "assets/images/256_luke-porter-261779-unsplash.jpg",
+  name: "Elizabeth J. Ohara", 
+  date: "4 hours ago"
+}, {
+  avatar: "assets/images/256_michael-dam-258165-unsplash.jpg",
+  name: "Kaci M. Langston", 
+  date: "just now"
+}] 
+%}
+
+
+{% set list_items = [{
+  avatar: "assets/images/256_rsz_1andy-lee-642320-unsplash.jpg",
+  name: "Jenell D. Matney",
+  date: "4 days ago",
+  amount: "$573",
+  icon: "monetization_on",
+  icon_bg: "bg-purple",
+  message: "Confirmation required for design"
+}, {
+  avatar: "assets/images/256_daniel-gaffey-1060698-unsplash.jpg",
+  name: "Sherri J. Cardenas", 
+  date: "3 days ago",
+  amount: "$612",
+  icon: "email",
+  icon_bg: "bg-teal",
+  message: "Improve spacings on Projects page"
+}, {
+  avatar: "assets/images/256_jeremy-banks-798787-unsplash.jpg",
+  name: "Joseph S. Ferland", 
+  date: "2 days ago",
+  amount: "$244",
+  icon: "monetization_on",
+  icon_bg: "",
+  message: "You unlocked a new Badge"
+}, {
+  avatar: "assets/images/256_joao-silas-636453-unsplash.jpg",
+  name: "Bryan K. Davis", 
+  date: "1 day ago",
+  amount: "$664",
+  icon: "monetization_on",
+  icon_bg: "",
+  message: "Meeting on Friday"
+}, {
+  avatar: "assets/images/256_michael-dam-258165-unsplash.jpg",
+  name: "Kaci M. Langston", 
+  date: "just now",
+  amount: "$631",
+  icon: "description",
+  icon_bg: "",
+  message: "Design a new Brochure"
+}] 
+%}
+
+<div class="alert alert-soft-warning flex items-center mb-4" role="alert">
+<i class="material-icons mr-3">error_outline</i>
+<div class="text-body"><strong>API gateways are now Offline.</strong> Please try the API later. If you want to stay up to date follow our <a href="" class="text-primary">Status Page </a></div>
+</div>
+
+<div class="grid lg:grid-cols-3 gap-4">
+
+  <div class="card card-body flex items-center">
+    <div class="flex-1">
+      <div class="card-header__title mb-2">Current Target</div>
+      <div class="text-2xl">&dollar;12,920</div>
+      <div class="flex items-center text-sm font-semibold text-success">31.5% <i class="material-icons" style="font-size:16px;">arrow_upward</i></div>
+    </div>
+    <div><i class="material-icons text-primary ml-3" style="font-size:48px;">gps_fixed</i></div>
+  </div>  
+  <div class="card card-body flex items-center">
+    <div class="flex-1">
+      <div class="card-header__title mb-2">Earnings</div>
+      <div class="text-2xl">&dollar;3,642</div>
+      <div class="flex items-center text-sm font-semibold text-success">51.5%  <i class="material-icons" style="font-size:16px;">arrow_upward</i></div>
+    </div>
+    <div><i class="material-icons text-success ml-3" style="font-size:48px;">monetization_on</i></div>
+  </div>
+  <div class="card card-body flex items-center">
+    <div class="flex-1">
+      <div class="card-header__title mb-2">Website Traffic</div>
+      <div class="text-2xl">8,391</div>
+      <div class="flex items-center text-sm font-semibold text-danger">3.5%  <i class="material-icons" style="font-size:16px;">arrow_downward</i></div>
+    </div>
+    <div><i class="material-icons text-secondary ml-3" style="font-size:48px;">perm_identity</i></div>
+  </div>
+</div>
+
+<div class="lg:flex">
+  <div class="lg:w-2/3 lg:mr-2">
+    <div class="card dashboard-area-tabs" id="dashboard-area-tabs">
+      <div class="card-header ">
+        <div class="grid lg:grid-cols-2" role="tablist">
+          <div 
+            class="" 
+            data-toggle="chart" 
+            data-target="#earningsTrafficChart" 
+            data-update='{"data":{"datasets":[{"label": "Traffic", "data":[10,2,5,15,10,12,15,25,22,30,25,40]}]}}' 
+            data-prefix="" 
+            data-suffix="k">
+            <a 
+              href="#" 
+              data-toggle="tab" 
+              role="tab" 
+              aria-selected="true" 
+              class="dashboard-area-tabs__tab card-body text-center active">
+              <span class="card-header__title m-0">Sessions</span>
+              <span class="text-amount">18,391</span>
+            </a>
+          </div>
+          <div 
+            class="border-gray-light border-l-2" 
+            data-toggle="chart" 
+            data-target="#earningsTrafficChart" 
+            data-update='{"data":{"datasets":[{"label": "Earnings", "data":[7,35,12,27,34,17,19,30,28,32,24,39]}]}}' 
+            data-prefix="$" 
+            data-suffix="k">
+            <a 
+              href="#" 
+              data-toggle="tab" 
+              role="tab" 
+              aria-selected="false" 
+              class="dashboard-area-tabs__tab card-body text-center">
+              <span class="card-header__title m-0">Orders</span>
+              <span class="text-amount">&dollar;8,942</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card-body text-muted" style="height: 280px;">
+        <div class="chart" style="height: calc(280px - 1.25rem * 2);">
+          <canvas id="earningsTrafficChart">
+            <span style="font-size: 1rem;"><strong>Website Traffic / Earnings</strong> area chart goes here.</span>
+          </canvas>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header card-header-large bg-white">
+        <h4 class="card-header__title">Recent Clients</h4>
+      </div>
+      <div class="overflow-x-scroll lg:overflow-hidden">
+      <table class="table table-list w-full table-striped-primary">
+        <tbody>
+            
+            <tr>
+              <td style="width:80px">
+                <div class="bg-primary text-white w-12 h-12 rounded-full inline-flex items-center align-middle justify-center font-bold text-4xl mx-4"> 
+                  <i class="material-icons">email</i>
+                </div>
+              </td>
+              <td>
+                  <a href="" class="font-bold hover:text-primary text-sm">  Jenell D. Matney</a>
+
+
+              </td>
+              <td class="">
+                <div class="flex items-center">
+
+                <i class="material-icons mr-2 text-muted">business</i><a href="#" class="text-gray-dark"> Jim &amp; Car Ent</a>
+                </div>
+              </td>
+              <td>
+                <img src="../public/vendor/svg-country-flags/png250px/us.png" alt="" class="rounded-sm w-6">
+              </td>
+
+              <td>
+                <div class="flex items-center">
+                <span class=" mr-1 text-xs font-semibold text-warning">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                  </span>
+                  <span class=" mr-1 text-xs font-semibold text-warning">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                  </span>
+                  <span class=" mr-1 text-xs font-semibold text-warning">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                  </span>
+                  <span class=" mr-1 text-xs font-semibold text-warning">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                  </span>
+                  <span class=" mr-1 text-xs font-semibold text-muted">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                  </span>
+                  
+                </div>
+              </td>
+              <td>
+                <a href="#" class="text-primary text-sm font-bold">#design</a>
+              </td>
+            </tr>
+            
+            <tr>
+              <td style="width:80px">
+                <div class="bg-primary text-white w-12 h-12 rounded-full inline-flex items-center align-middle justify-center font-bold text-4xl mx-4"> 
+                  <i class="material-icons">monetization_on</i>
+                </div>
+              </td>
+              <td>
+                  <a href="" class="font-bold hover:text-primary text-sm">  Sherri J. Cardenas</a>
+
+
+              </td>
+              <td class="">
+                <div class="flex items-center">
+
+                <i class="material-icons mr-2 text-muted">business</i><a href="#" class="text-gray-dark"> Shoe LTD</a>
+                </div>
+              </td>
+              <td>
+                <img src="../public/vendor/svg-country-flags/png250px/ro.png" alt="" class="rounded-sm w-6">
+              </td>
+
+              <td>
+                <div class="flex items-center">
+                <span class=" mr-1 text-xs font-semibold text-warning">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                  </span>
+                  <span class=" mr-1 text-xs font-semibold text-warning">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                  </span>
+                  <span class=" mr-1 text-xs font-semibold text-warning">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                  </span>
+                  <span class=" mr-1 text-xs font-semibold text-warning">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                  </span>
+                  <span class=" mr-1 text-xs font-semibold text-muted">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                  </span>
+                  
+                </div>
+              </td>
+              <td>
+                <a href="#" class="text-primary text-sm font-bold">#design</a>
+              </td>
+            </tr>
+            
+            <tr>
+              <td style="width:80px">
+                <div class="bg-primary text-white w-12 h-12 rounded-full inline-flex items-center align-middle justify-center font-bold text-4xl mx-4"> 
+                  <i class="material-icons">monetization_on</i>
+                </div>
+              </td>
+              <td>
+                  <a href="" class="font-bold hover:text-primary text-sm">  Joseph S. Ferland</a>
+
+
+              </td>
+              <td class="">
+                <div class="flex items-center">
+
+                <i class="material-icons mr-2 text-muted">business</i><a href="#" class="text-gray-dark"> RODE LLC</a>
+                </div>
+              </td>
+              <td>
+                <img src="../public/vendor/svg-country-flags/png250px/gb.png" alt="" class="rounded-sm w-6">
+              </td>
+
+              <td>
+                <div class="flex items-center">
+                <span class=" mr-1 text-xs font-semibold text-warning">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                  </span>
+                  <span class=" mr-1 text-xs font-semibold text-warning">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                  </span>
+                  <span class=" mr-1 text-xs font-semibold text-warning">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                  </span>
+                  <span class=" mr-1 text-xs font-semibold text-warning">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                  </span>
+                  <span class=" mr-1 text-xs font-semibold text-muted">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                  </span>
+                  
+                </div>
+              </td>
+              <td>
+                <a href="#" class="text-primary text-sm font-bold">#design</a>
+              </td>
+            </tr>
+            
+            <tr>
+              <td>
+                <div class="bg-primary text-white w-12 h-12 rounded-full inline-flex items-center align-middle justify-center font-bold text-4xl mx-4"> 
+                  <i class="material-icons">description</i>
+                </div>
+              </td>
+              <td>
+                  <a href="" class="font-bold hover:text-primary text-sm">  Bryan K. Davis</a>
+
+
+              </td>
+              <td class="">
+                <div class="flex items-center">
+
+                <i class="material-icons mr-2 text-muted">business</i><a href="#" class="text-gray-dark"> Bavis Store Ltd</a>
+                </div>
+              </td>
+              <td>
+                <img src="../public/vendor/svg-country-flags/png250px/fr.png" alt="" class="rounded-sm w-6">
+              </td>
+
+              <td>
+                <div class="flex items-center">
+                <span class=" mr-1 text-xs font-semibold text-warning">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                  </span>
+                  <span class=" mr-1 text-xs font-semibold text-warning">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                  </span>
+                  <span class=" mr-1 text-xs font-semibold text-warning">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                  </span>
+                  <span class=" mr-1 text-xs font-semibold text-warning">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                  </span>
+                  <span class=" mr-1 text-xs font-semibold text-muted">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                  </span>
+                  
+                </div>
+              </td>
+              <td>
+                <a href="#" class="text-primary text-sm font-bold">#design</a>
+              </td>
+            </tr>
+            
+          </tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+  <div class="lg:w-1/3 lg:ml-2">
+    <div class="card">
+      <div class="card-header card-header-large bg-white">
+        <h4 class="card-header__title">Revenue by location</h4>
+      </div>
+      <div class="card-body">
+        <div
+          id="vector-map-revenue"
+          class="map mb-3"  
+          data-toggle="vector-map" 
+          data-vector-map-map="world_en"
+          data-vector-map-show-tooltip="false"
+          data-vector-map-enable-zoom="true"
+          data-vector-map-scale="1.1"
+          data-vector-map-pins='{
+            "it": "<div class=\"map-pin blue\"><span>Vatican City</span></div>",
+            "us": "<div class=\"map-pin blue\"><span>New York</span></div>",
+            "au": "<div class=\"map-pin blue\"><span>Sydney</span></div>"
+          }'>
+        </div>
+
+        <ul class="list-unstyled m-0" role="tablist">
+          <li 
+            data-toggle="vector-map-focus" 
+            data-target="#vector-map-revenue" 
+            data-focus="us" 
+            data-animate="true">
+            <div 
+              class="dashboard-location-tabs__tab active" 
+              data-toggle="tab" 
+              role="tab" 
+              aria-selected="true">
+              <div><strong>New York</strong></div>
+              <div class="flex items-center">
+                <div class="flex-1 mr-2">
+                  <div class="w-full bg-gray-light h-1">
+                    <div class="bg-primary text-xs leading-none h-1 text-center text-white" style="width: 45%"></div>
+                  </div>
+                
+                </div>
+                <div>72k</div>
+              </div>
+            </div>
+          </li>
+          <li 
+            data-toggle="vector-map-focus" 
+            data-target="#vector-map-revenue" 
+            data-focus="it" 
+            data-animate="true">
+            <div 
+              class="dashboard-location-tabs__tab" 
+              data-toggle="tab" 
+              role="tab" 
+              aria-selected="true">
+              <div><strong>Vatican City</strong></div>
+              <div class="flex items-center">
+                <div class="flex-1 mr-2">
+                 <div class="w-full bg-gray-light h-1">
+                    <div class="bg-primary text-xs leading-none h-1 text-center text-white" style="width: 45%"></div>
+                  </div>
+                
+                </div>
+                <div>39k</div>
+              </div>
+            </div>
+          </li>
+          <li 
+            data-toggle="vector-map-focus" 
+            data-target="#vector-map-revenue" 
+            data-focus="au" 
+            data-animate="true">
+            <div 
+              class="dashboard-location-tabs__tab" 
+              data-toggle="tab" 
+              role="tab" 
+              aria-selected="true">
+              <div><strong>Sydney</strong></div>
+              <div class="flex items-center">
+                <div class="flex-1 mr-2">
+                  <div class="w-full bg-gray-light h-1">
+                    <div class="bg-primary text-xs leading-none h-1 text-center text-white" style="width: 45%"></div>
+                  </div>
+                
+                </div>
+                <div>25k</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

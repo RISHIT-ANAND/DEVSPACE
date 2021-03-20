@@ -1,0 +1,58 @@
+.flatpickr-input[readonly] {
+  background-color: $input-bg;
+}
+.flatpickr-wrapper {
+  display: block;
+  height: auto !important;
+}
+.flatpickr-hidden-input {
+  visibility: hidden; 
+  height: 0;
+}
+.flatpickr-calendar-right .flatpickr-calendar {
+  right: -1.5rem;
+  
+}
+.flatpickr-wrapper .flatpickr-input {
+  height: 0;
+  visibility: hidden;
+  padding: 0;
+}
+
+
+.link-date {
+  color: $primary;
+  position: relative;
+  overflow: hidden;
+  background: rgba($primary, .05);
+  padding: 2px 4px;
+  border-radius: 2px;
+  
+  &::after {
+    content: "................................................................";
+    color: rgba($gray-dark, .4);
+    font-size: .75rem;
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    top: .525rem;
+    white-space: nowrap;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.d-flex {
+  @apply flex;
+}
+
+.align-items-center {
+  @apply items-center;
+}
+
+.icon-muted {
+  color: $gray-dark;
+}

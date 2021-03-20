@@ -1,0 +1,99 @@
+.badge { 
+  @apply text-xs inline-flex items-center align-middle leading-none py-1 px-2;
+}
+
+
+@each $color, $value in $theme-colors {
+  .badge-#{$color} {
+    background: $value;
+    font-weight: bold;
+    color: #ffffff;
+  }
+
+  .badge-soft-#{$color} {
+    background: rgba($value,.08);
+    font-weight: bold;
+    color: $value;
+  }
+}
+
+// .badge-primary {
+//   @apply bg-primary text-white;
+// }
+
+// .badge-success {
+//   @apply bg-success text-white;
+// }
+
+// .badge-warning {
+//   @apply bg-warning text-gray-darker;
+// }
+
+// .badge-danger {
+//   @apply bg-danger text-white;
+// }
+
+
+.alert { 
+  @apply flex items-center p-4 rounded relative;
+}
+
+.alert-primary {
+  @apply bg-primary-light text-primary-darker;
+}
+
+.alert-secondary {
+  @apply bg-secondary-light text-secondary-darker;
+}
+
+.alert-success {
+  @apply bg-success-light text-success-darker;
+}
+
+.alert-warning {
+  @apply bg-warning-light text-warning-darker;
+}
+
+.alert-danger {
+  @apply bg-danger-light text-danger-darker;
+}
+
+.alert-info {
+  @apply bg-info-light text-info-darker;
+}
+
+.alert-dark {
+  @apply bg-muted text-gray-darker;
+}
+
+.alert-light {
+  @apply bg-gray-light text-gray-dark;
+}
+
+
+// Alternate styles with softer background color
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+@each $color, $value in $theme-colors {
+  .alert-soft-#{$color} {
+    background: rgba($value,.08);
+    border: 1px solid rgba($value,.2);
+    @apply flex items-center;
+    .material-icons {
+      color: $value;
+    }
+  }
+}
+
+
+.alert-dismissible .close {
+  position: absolute;
+    top: 0;
+    right: 0;
+    padding: .75rem 1.25rem;
+    color: inherit;
+    outline: none;
+    @apply text-lg;
+}
+

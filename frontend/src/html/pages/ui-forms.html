@@ -1,0 +1,129 @@
+---
+title: Tailwind CSS Forms Design
+slug: ui-forms
+---
+{% extends "../layouts/admin.html" %}
+
+{% block content %}
+<section class="max-w-6xl  mx-auto px-4">
+  <h1 class="my-8">Forms</h1>
+  <div class="card">
+      <div class="lg:flex">
+          <div class="lg:w-2/6 p-8">
+              <p><strong class="headings-color">Default Forms</strong></p>
+              <p class="text-gray-dark">TailStack supports tailwind custom form plugin/library from https://tailwindcss-custom-forms.netlify.app/.</p>
+          </div>
+          <div class="lg:w-4/6 card-dark p-8">
+                
+              <label class="block">
+                <span class="form-label">Name</span>
+                <input class="form-input mt-1 block w-full placeholder-muted" placeholder="Jane Doe">
+              </label>
+
+              <div class="mt-8">
+                <span class="form-label">Account Type</span>
+                <div class="mt-2">
+                  <label class="inline-flex items-center">
+                    <input type="radio" class="form-radio" name="accountType" value="personal">
+                    <span class="ml-2">Personal</span>
+                  </label>
+                  <label class="inline-flex items-center ml-6">
+                    <input type="radio" class="form-radio" name="accountType" value="busines">
+                    <span class="ml-2">Business</span>
+                  </label>
+                </div>
+              </div>
+
+              <label class="block mt-8">
+                <span class="form-label">Requested Limit</span>
+                <select class="form-select mt-1 block w-full">
+                  <option>$1,000</option>
+                  <option>$5,000</option>
+                  <option>$10,000</option>
+                  <option>$25,000</option>
+                </select>
+              </label>
+
+              <div class="flex mt-8">
+                <label class="flex items-center">
+                  <input type="checkbox" class="form-checkbox">
+                  <span class="ml-2">I agree to the <span class="underline">privacy policy</span></span>
+                </label>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="card">
+    <div class="lg:flex">
+      <div class="lg:w-2/6 p-8">
+          <p><strong class="headings-color">Form Validations</strong></p>
+          <p class="text-gray-dark">Provide valuable, actionable feedback to your users with HTML5 form validation. Indicate invalid and valid form fields with .is-invalid and .is-valid classes.</p>
+      </div>
+      <div class="lg:w-4/6 card-dark p-8">
+      <form>
+                                  
+                                            <div class="grid grid-cols-2 gap-4 mb-8">
+                                                <div>
+                                                    <label for="validationSample01" class="form-label">First name</label>
+                                                      <input class="form-input mt-1 mb-1 block w-full border-success placeholder-muted" placeholder="Jane Doe" value="Mark">
+                                                    <div class="text-danger text-xs font-bold hidden">Please provide a first name.</div>
+                                                    <div class="text-success text-xs font-bold">Looks good!</div>
+                                                </div>
+                                                <div>
+                                                    <label for="validationSample02" class="form-label">Last name</label>
+                                                    <input type="text" class="form-input mt-1 mb-1 block w-full border-success placeholder-muted" id="validationSample02" placeholder="Last name" value="Otto" required="">
+                                                    <div class="text-danger text-xs font-bold hidden">Please provide a first name.</div>
+                                                    <div class="text-success text-xs font-bold">Looks good!</div>
+                                                </div>
+                                                <div>
+                                                    <label for="validationSample03" class="form-label">City</label>
+                                                    <input type="text" class="form-input mt-1 mb-1 block w-full border-danger placeholder-muted" id="validationSample03" placeholder="City" required="">
+                                                    <div class="text-danger text-xs font-bold">Please provide a valid city.</div>
+                                                    <div class="text-success text-xs font-bold hidden">Looks good!</div>
+                                                </div>
+                                                <div>
+                                                    <label for="validationSample04" class="form-label">State</label>
+                                                    <input type="text" class="form-input mt-1 mb-1 block w-full border-danger placeholder-muted" id="validationSample04" placeholder="State" required="">
+                                                    <div class="text-danger text-xs font-bold">Please provide a valid state.</div>
+                                                    <div class="text-success text-xs font-bold hidden">Looks good!</div>
+                                                </div>
+                                            </div>
+                                       
+                                        <button class="btn btn-primary" type="submit">Submit</button>
+                                    </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEARCH -->
+  <div class="card">
+      <div class="lg:flex">
+          <div class="lg:w-2/6 p-8">
+              <p><strong class="headings-color">Search</strong></p>
+              <p class="text-gray-dark">A dedicated form group alternative for search forms that always keeps the submit button as part of the form control.</p>
+          </div>
+          <div class="lg:w-4/6 card-dark p-8">
+              
+               <div class="flex-1 flex justify-between">
+                  <!-- This is an example component -->
+                  <div class="relative text-gray-darker hidden lg:flex flex-grow">
+                      <input
+                        type="search" name="search" placeholder="Search" class="form-input">
+                      <button type="submit" class="absolute right-0 top-0 mt-3 mr-4 ">
+                        <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+                          viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve"
+                          width="512px" height="512px">
+                          <path
+                            d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
+                        </svg>
+                      </button>
+                    </div>
+                </div>
+
+
+          </div>
+    </div>
+    </div>
+</section>
+{% endblock %}

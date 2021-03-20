@@ -1,0 +1,20 @@
+---
+title: Admin Layout
+slug: admin
+---
+{% extends "../layouts/admin.html" %}
+
+{% block headerScripts %}
+  {% include '_dashboard.header.html' %}
+{% endblock %}
+
+{% block content %}
+<!-- <section class="max-w-6xl  mx-auto px-8 my-8"> -->
+<section class="px-8 my-8">
+  {% include '_dashboard.html' %}
+</section>
+{% endblock %}
+
+{% block footerScripts %}
+  {% include '_dashboard.footer.html' %}
+{% endblock %}

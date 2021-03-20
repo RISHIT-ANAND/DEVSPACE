@@ -1,0 +1,171 @@
+---
+title: Things to do
+slug: page
+---
+{% extends "../layouts/default.html" %}
+
+{% block content %}
+  <section class="max-w-6xl  mx-auto px-4 my-24">
+    {% include "../components/banners/banner_one.html" with 
+      {   
+        title: "Learn HTML & CSS the practical MasterClass.",
+        subtitle: "This course is designed to teach you HTML as well as how to plan your Application UI (no coding experience required).",
+        button_one: "Browse All",
+        button_two: "Latest Lessons"
+      } 
+    %}
+    <div class="text-center mb-8">
+      {% include '../components/headings/heading_one.html' with { title: "Features & Highlights", subtitle: 'IOTask Includes everything you need for UI and UX part for project and task management service, todo apps, CRM systems, and any other SAAS platform.' } only %}
+    </div>
+    
+    
+    <!-- WHAT'S NEW ICON WITH CARDS -->
+    <div class="lg:flex mb-16 lg:pt-8 -mx-2">
+      
+      <div class="lg:w-1/3 h-100 mx-2">
+        <div class="p-4 bg-primary  shadow-xl text-white rounded">
+          <!-- SVG -->
+          
+          <div class="py-4 mb-4 text-green-500 mt-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" style="display:block;margin:0 auto">
+              <g stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6.811667 8.736667h26.376666M14.268333 1.236667h11.463334c.331666 0 .65.133333.885.366666L32.823333 7.81c.488334.49.488334 1.281667-.001666 1.77-.013334.013333-.028334.026667-.041667.04L20.841667 20.473333c-.476667.433334-1.206667.433334-1.683334 0L7.22 9.62c-.511667-.465-.548333-1.256667-.083333-1.768333.013333-.013334.026666-.028334.04-.041667l6.206666-6.206667c.235-.233333.553334-.366666.885-.366666zM13.781667 1.336667L19.86 20.79M26.218333 1.336667L20.14 20.79M6.25 38.736667l-3.356667-4.195C1.83 33.211667 1.25 31.56 1.25 29.856667v-8.62c0-1.38 1.12-2.5 2.5-2.5h0c1.38 0 2.5 1.12 2.5 2.5v6.25" stroke-width="2.5000050000000003"></path>
+                <path d="M13.75 38.51v-5c0-1.483333-.438333-2.933333-1.261667-4.166667L10.585 26.5c-.663333-1.105-2.096667-1.463333-3.201667-.798333C7.351667 25.72 7.32 25.74 7.29 25.76h0c-.978333.651667-1.318333 1.931667-.793333 2.983333l2.253333 3.75M33.75 38.736667l3.356667-4.195C38.17 33.211667 38.75 31.56 38.75 29.856667v-8.62c0-1.38-1.12-2.5-2.5-2.5h0c-1.38 0-2.5 1.12-2.5 2.5v6.25" stroke-width="2.5000050000000003"></path>
+                <path d="M26.25 38.51v-5c0-1.483333.438333-2.933333 1.261667-4.166667L29.415 26.5c.663333-1.105 2.096667-1.463333 3.201667-.798333C32.648333 25.72 32.68 25.74 32.71 25.76h0c.978333.651667 1.318333 1.931667.793333 2.983333l-2.253333 3.75" stroke-width="2.5000050000000003"></path>
+              </g>
+            </svg>
+          </div>
+          
+          <ul class="px-6 text-center font-semibold mb-8">
+            <li class="mb-2 text-lg">
+              Built for Rails Applications
+            </li>
+            <li class="mb-2 text-lg">
+             Rails 4+ Compatibility
+            </li>
+            <li class="mb-2 text-lg">
+             Ready-To-Go Devise Views
+            </li>
+            <li class="mb-2 text-lg">
+             Pages as Rails views (.erb) 
+            </li>
+            <li class="mb-2 text-lg">
+             Quick Instalation (&lt; 5 min)
+            </li>
+          </ul>
+          
+          <!-- END -->
+        </div>
+      </div>
+        <div class="lg:w-1/3 h-100 mx-2">
+        <div class="p-4 bg-gray-light shadow-xl bg-white rounded">
+          <!-- SVG -->
+          
+          <div class="py-4 mb-4 text-gray-500 mt-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" style="display:block;margin:0 auto">
+              <g stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6.811667 8.736667h26.376666M14.268333 1.236667h11.463334c.331666 0 .65.133333.885.366666L32.823333 7.81c.488334.49.488334 1.281667-.001666 1.77-.013334.013333-.028334.026667-.041667.04L20.841667 20.473333c-.476667.433334-1.206667.433334-1.683334 0L7.22 9.62c-.511667-.465-.548333-1.256667-.083333-1.768333.013333-.013334.026666-.028334.04-.041667l6.206666-6.206667c.235-.233333.553334-.366666.885-.366666zM13.781667 1.336667L19.86 20.79M26.218333 1.336667L20.14 20.79M6.25 38.736667l-3.356667-4.195C1.83 33.211667 1.25 31.56 1.25 29.856667v-8.62c0-1.38 1.12-2.5 2.5-2.5h0c1.38 0 2.5 1.12 2.5 2.5v6.25" stroke-width="2.5000050000000003"></path>
+                <path d="M13.75 38.51v-5c0-1.483333-.438333-2.933333-1.261667-4.166667L10.585 26.5c-.663333-1.105-2.096667-1.463333-3.201667-.798333C7.351667 25.72 7.32 25.74 7.29 25.76h0c-.978333.651667-1.318333 1.931667-.793333 2.983333l2.253333 3.75M33.75 38.736667l3.356667-4.195C38.17 33.211667 38.75 31.56 38.75 29.856667v-8.62c0-1.38-1.12-2.5-2.5-2.5h0c-1.38 0-2.5 1.12-2.5 2.5v6.25" stroke-width="2.5000050000000003"></path>
+                <path d="M26.25 38.51v-5c0-1.483333.438333-2.933333 1.261667-4.166667L29.415 26.5c.663333-1.105 2.096667-1.463333 3.201667-.798333C32.648333 25.72 32.68 25.74 32.71 25.76h0c.978333.651667 1.318333 1.931667.793333 2.983333l-2.253333 3.75" stroke-width="2.5000050000000003"></path>
+              </g>
+            </svg>
+          </div>
+          
+          <ul class="px-6 text-center font-semibold mb-8">
+            <li class="mb-2 text-lg">
+              Built for Rails Applications
+            </li>
+            <li class="mb-2 text-lg">
+             Rails 4+ Compatibility
+            </li>
+            <li class="mb-2 text-lg">
+             Ready-To-Go Devise Views
+            </li>
+            <li class="mb-2 text-lg">
+             Pages as Rails views (.erb) 
+            </li>
+            <li class="mb-2 text-lg">
+             Quick Instalation (&lt; 5 min)
+            </li>
+          </ul>
+          
+          <!-- END -->
+        </div>
+      </div>
+        <div class="lg:w-1/3 h-100 mx-2">
+        <div class="p-4 bg-success text-white shadow-xl rounded">
+          <!-- SVG -->
+          
+          <div class="py-4 mb-4 text-blue-500 mt-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" style="display:block;margin:0 auto">
+              <g stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6.811667 8.736667h26.376666M14.268333 1.236667h11.463334c.331666 0 .65.133333.885.366666L32.823333 7.81c.488334.49.488334 1.281667-.001666 1.77-.013334.013333-.028334.026667-.041667.04L20.841667 20.473333c-.476667.433334-1.206667.433334-1.683334 0L7.22 9.62c-.511667-.465-.548333-1.256667-.083333-1.768333.013333-.013334.026666-.028334.04-.041667l6.206666-6.206667c.235-.233333.553334-.366666.885-.366666zM13.781667 1.336667L19.86 20.79M26.218333 1.336667L20.14 20.79M6.25 38.736667l-3.356667-4.195C1.83 33.211667 1.25 31.56 1.25 29.856667v-8.62c0-1.38 1.12-2.5 2.5-2.5h0c1.38 0 2.5 1.12 2.5 2.5v6.25" stroke-width="2.5000050000000003"></path>
+                <path d="M13.75 38.51v-5c0-1.483333-.438333-2.933333-1.261667-4.166667L10.585 26.5c-.663333-1.105-2.096667-1.463333-3.201667-.798333C7.351667 25.72 7.32 25.74 7.29 25.76h0c-.978333.651667-1.318333 1.931667-.793333 2.983333l2.253333 3.75M33.75 38.736667l3.356667-4.195C38.17 33.211667 38.75 31.56 38.75 29.856667v-8.62c0-1.38-1.12-2.5-2.5-2.5h0c-1.38 0-2.5 1.12-2.5 2.5v6.25" stroke-width="2.5000050000000003"></path>
+                <path d="M26.25 38.51v-5c0-1.483333.438333-2.933333 1.261667-4.166667L29.415 26.5c.663333-1.105 2.096667-1.463333 3.201667-.798333C32.648333 25.72 32.68 25.74 32.71 25.76h0c.978333.651667 1.318333 1.931667.793333 2.983333l-2.253333 3.75" stroke-width="2.5000050000000003"></path>
+              </g>
+            </svg>
+          </div>
+          
+          <ul class="px-6 text-center font-semibold mb-8">
+            <li class="mb-2 text-lg">
+              Built for Rails Applications
+            </li>
+            <li class="mb-2 text-lg">
+             Rails 4+ Compatibility
+            </li>
+            <li class="mb-2 text-lg">
+             Ready-To-Go Devise Views
+            </li>
+            <li class="mb-2 text-lg">
+             Pages as Rails views (.erb) 
+            </li>
+            <li class="mb-2 text-lg">
+             Quick Instalation (&lt; 5 min)
+            </li>
+          </ul>
+          
+          <!-- END -->
+        </div>
+      </div>
+    </div>
+    <!-- END WHAT'S NEW -->
+
+
+    <div class="text-left mb-8">
+      {% include '../components/headings/heading_one.html' with { title: "Latest Courses", subtitle: 'IOTask Includes everything you need for UI and UX part for project and task management service, todo apps, CRM systems, and any other SAAS platform.' } only %}
+    </div>
+
+    <div class="grid grid-cols-4 gap-4 mb-16">
+      
+        {% include '../components/cards/card_one.html' with { title: 'Learn the Basics of HTML, CSS', author: 'Adrian Demian' } only %}
+        {% include '../components/cards/card_one.html' with { title: 'Learn the Basics of HTML, CSS', author: 'Adrian Demian' } only %}
+        {% include '../components/cards/card_one.html' with { title: 'Learn the Basics of HTML, CSS', author: 'Adrian Demian' } only %}
+        {% include '../components/cards/card_one.html' with { title: 'Learn the Basics of HTML, CSS', author: 'Adrian Demian' } only %}
+
+    </div>
+
+
+    <div class="text-center mb-8">
+    {% include '../components/headings/heading_one.html' with { title: 'Frequently Asked Questions', subtitle: 'IOTask Includes everything you need for UI and UX part for project and task management service, todo apps, CRM systems, and any other SAAS platform.' } only %}
+    </div>
+    <div class="text-left mb-16">
+      {% include '../components/headings/heading_one.html' with { title: 'Testimonials', subtitle: 'IOTask Includes everything you need for UI and UX part for project and task management service, todo apps, CRM systems, and any other SAAS platform.' } only %}
+    </div>
+
+
+    <div class="text-left ">
+      {% include '../components/headings/heading_one.html' with { title: 'Popular topics', subtitle: '' } only %}
+    </div>
+
+    <div class="grid grid-cols-6 gap-4">
+      {% include '../components/cards/card_two.html' %}
+      {% include '../components/cards/card_two.html' %}
+      {% include '../components/cards/card_two.html' %}
+      {% include '../components/cards/card_two.html' %}
+      {% include '../components/cards/card_two.html' %}
+      {% include '../components/cards/card_two.html' %}
+    </div>
+    
+    
+  </section>
+{% endblock %}

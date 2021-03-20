@@ -1,0 +1,47 @@
+<div class="mdk-drawer {{ drawerClass or '' }} js-mdk-drawer" id="default-drawer" data-align="{{ drawerAlign }}">
+  <div class="mdk-drawer__content">
+    <div class="sidebar sidebar-dark sidebar-left bg-gray-darker" data-perfect-scrollbar>
+      <div class="flex items-center sidebar-p-a border-b-2 bg-darker sidebar-account">
+        <a href="#" class="flex items-center text-underline-0 text-body">
+          <div class="avatar w-12 h-12 mr-2">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="Avatar" class="rounded-full p-1 bg-darker border-1">
+          </div>
+          <div class="leading-none">
+
+            <div class="mb-1"><strong>Adrian Demian</strong></div>
+          
+            <small class="text-muted text-xs">ACCOUNT MANAGER</small>
+          </div>
+          
+        </a>
+        
+      </div>
+      
+      <div class="sidebar-heading sidebar-m-t">DEMOS</div>
+      <ul class="sidebar-menu" id="demos_menu">
+        {% include '_menu.demos.html' %}  
+      </ul>
+
+      <div class="sidebar-heading">UI Components</div>
+      <div class="sidebar-block p-0">
+        {% include '_menu.components.html' %}  
+
+        <div class="sidebar-p-a sidebar-b-y">
+          <div class="flex items-center mb-2">
+            <div class="uppercase text-xs flex-1 text-body font-bold">Progress</div>
+            <div class="font-bold text-success">60%</div>
+          </div>
+          <div class="w-full bg-gray-light h-1">
+            <div class="bg-success text-xs leading-none h-1 text-center text-white" style="width: 45%"></div>
+          </div>
+        
+        </div>
+      </div>
+
+      <div class="sidebar-p-a">
+        <a href="https://themeforest.net/item/stack-admin-bootstrap-4-dashboard-template/22959011" class="btn btn-outline-primary btn-block">Purchase Stack &dollar;35</a>
+      </div>
+
+    </div>
+  </div>
+</div>

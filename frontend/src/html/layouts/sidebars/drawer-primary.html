@@ -1,0 +1,89 @@
+<div class="mdk-drawer {{ drawerClass or '' }} js-mdk-drawer" id="default-drawer" data-align="{{ drawerAlign }}">
+  <div class="mdk-drawer__content">
+    <div class="sidebar sidebar-dark sidebar-left bg-primary-darker" data-perfect-scrollbar>      
+
+
+      <a href="index.html" class="sidebar-block flex items-center text-xl pt-4 text-white">
+          <span class="mr-1 -mt-1">
+              
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 263 125" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Profile-Photo" transform="translate(-67.000000, -117.000000)">
+                            <path d="M154.333333,130.8 C109.355556,130.8 81.2444444,153.244444 70,198.133333 C86.8666667,175.688889 106.544444,167.272222 129.033333,172.883333 C141.864493,176.084784 151.035588,185.374914 161.186823,195.658833 C177.723652,212.411117 196.862946,231.8 238.666667,231.8 C283.644444,231.8 311.755556,209.355556 323,164.466667 C306.133333,186.911111 286.455556,195.327778 263.966667,189.716667 C251.135507,186.515216 241.964412,177.225086 231.813177,166.941167 C215.276348,150.188883 196.137054,130.8 154.333333,130.8 Z" id="Path" fill="rgba(0,0,0,.12)"></path>
+                            <path d="M151.333333,140.8 C106.355556,140.8 78.2444444,163.244444 67,208.133333 C83.8666667,185.688889 103.544444,177.272222 126.033333,182.883333 C138.864493,186.084784 148.035588,195.374914 158.186823,205.658833 C174.723652,222.411117 193.862946,241.8 235.666667,241.8 C280.644444,241.8 308.755556,219.355556 320,174.466667 C303.133333,196.911111 283.455556,205.327778 260.966667,199.716667 C248.135507,196.515216 238.964412,187.225086 228.813177,176.941167 C212.276348,160.188883 193.137054,140.8 151.333333,140.8 Z" id="Path-Copy-2" fill="rgba(0,0,0,.12)"></path>
+                            <path d="M159.666667,120.8 C116.111111,120.8 88.8888888,142.577778 78,186.133333 C94.3333333,164.355556 113.388889,156.188889 135.166667,161.633333 C147.592098,164.739691 156.473198,173.753876 166.303445,183.732333 C182.317371,199.987025 200.851469,218.8 241.333333,218.8 C284.888888,218.8 312.111112,197.022222 323,153.466667 C306.666667,175.244444 287.611112,183.411111 265.833333,177.966667 C253.407902,174.860309 244.526802,165.846124 234.696555,155.867667 C218.682629,139.612975 200.148531,120.8 159.666667,120.8 Z" id="Path-Copy" stroke="rgba(0,0,0,.12)" stroke-width="6" fill="#FFFFFF"></path>
+                        </g>
+                    </g>
+                </svg>
+              
+          </span>
+          <span><strong>TailStack</strong></span>
+      </a>
+      
+      <div class="sidebar-block flex justify-between mt-4">
+      <!-- This is an example component -->
+        <div class="relative text-white hidden lg:flex flex-grow ">
+            <input
+              type="search" name="search" placeholder="Search" class="bg-darker pr-8 focus:bg-darker">
+            <button type="submit" class="absolute right-0 top-0 mt-3 mr-4">
+              <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+                viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve"
+                width="512px" height="512px">
+                <path
+                  d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
+              </svg>
+            </button>
+          </div>
+      </div>
+
+
+      <div class="sidebar-heading sidebar-m-t">DEMOS</div>
+      <ul class="sidebar-menu" id="demos_menu">
+        {% include '_menu.demos.html' %}  
+      </ul>
+
+
+      <div class="sidebar-block">                   
+                            
+        <div class="leading-none border-t border-b pt-4 pb-4 text-sm">
+            <div class="mb-2">
+              <a href="#" class="text-body"><strong>Marketing Team Meeting</strong></a>
+              <div><small class="text-muted w-1/2">2 hrs ago</small></div>
+            </div>
+            <div class="flex overflow-hidden mt-2 ">
+              <img class="inline-block h-6 w-6 rounded-full text-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+              <img class="-ml-1 inline-block h-6 w-6 rounded-full text-white" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+              <img class="-ml-1 inline-block h-6 w-6 rounded-full text-white" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80" alt="">
+              <img class="-ml-1 inline-block h-6 w-6 rounded-full text-white" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+            </div>
+        </div>
+
+                    
+                            
+        <div class="leading-none border-t border-b pt-4 pb-4 text-sm">
+            <div class="mb-2">
+              <a href="#" class="text-body"><strong>Automatic Notification</strong></a>
+              <div><small class="text-muted w-1/2">1 day ago</small></div>
+            </div>
+            <div class="flex items-center"><i class="material-icons mr-1" style="font-size: 14px;">email</i> <div> Sent an <a href="#" class="text-white">Email</a> to Adrian </div></div>
+        </div>
+
+                    
+                            
+        <div class="leading-none border-t border-b pt-4 pb-4 text-sm">
+            <div class="mb-2">
+              <a href="#" class="text-body"><strong>Event Scheduled</strong></a>
+              <div><small class="text-muted w-1/2">2 days ago</small></div>
+            </div>
+
+            <div class="flex items-center"><i class="material-icons mr-1" style="font-size:14px;">location_on</i> Miami Street, Florida, USA</div>
+            
+        </div>
+
+                
+      </div>            
+    </div>
+  </div>
+</div>

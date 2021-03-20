@@ -1,0 +1,56 @@
+
+.table {
+  width: 100%;
+  tr td {
+    @apply p-2;
+  }
+  thead tr th {
+    text-align: left;
+    font-size: 85%;
+    color: $gray-dark;
+  
+    
+  }
+
+  &.table-sm {
+    
+    tr td, tr th {
+      @apply p-1;
+    }
+  }
+
+
+  &.table-lg tr td {
+    @apply p-3;
+  }
+
+  &.table-border {
+    border: 1px solid $border-color;
+    tr:not(:last-child) td {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+}
+
+
+
+.table-highlight {
+  @apply bg-gray-light;
+}
+
+.table.table-list {
+  thead tr th {
+    padding: 8px 0;
+    border-bottom: 1px solid $border-color;
+  }
+  tbody tr {
+    margin: 4px;
+    border:1px solid $border-color;
+
+  }
+}
+.table-striped-primary tr:nth-child(even) {
+  td {
+    background: rgba($primary, .05);
+  }
+}

@@ -1,0 +1,166 @@
+.btn {
+  @apply px-3 py-2 rounded font-semibold inline-flex text-sm items-center;
+  &.btn-large {
+    @apply px-6 py-3 text-lg;
+  }
+  &.btn-sm {
+    @apply px-2 py-1;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn-primary{
+  @apply bg-primary text-white;
+  &:hover {
+    background: darken($primary, 10);
+  }
+}
+
+.btn-secondary {
+  @apply bg-secondary text-white;
+  &:hover {
+    background: lighten($secondary, 10);
+  }
+}
+
+.btn-success {
+  @apply bg-success text-white;
+  &:hover {
+    background: darken($success, 10);
+  }
+}
+
+.btn-warning {
+  @apply bg-warning text-gray-darker;
+  &:hover {
+    background: darken($warning, 10);
+  }
+}
+
+.btn-danger {
+  @apply bg-danger text-white;
+  &:hover {
+    background: darken($danger, 10);
+  }
+}
+
+.btn-info {
+  @apply bg-info text-white;
+  &:hover {
+    background: darken($info, 10);
+  }
+}
+
+.btn-light {
+  border: 1px solid transparent;
+  @apply border-muted text-gray-darker;
+  &:hover {
+    background: darken(#ffffff, 10);
+  }
+}
+.btn-dark {
+  @apply bg-gray-darker text-white;
+  &:hover {
+    background: lighten($gray-darker, 10);
+  }
+}
+
+.btn-link {
+  @apply text-primary;
+}
+
+
+.button-list .btn {
+  @apply mb-4;
+}
+
+.btn-outline-primary {
+  border: 1px solid transparent;
+  @apply border-primary text-primary;
+  &:hover {
+    @apply bg-primary text-white;
+  }
+}
+
+.btn-outline-secondary {
+  border: 1px solid transparent;
+  @apply border-secondary;
+  &:hover {
+    @apply bg-secondary text-white;
+  }
+}
+
+.btn-outline-success {
+  border: 1px solid transparent;
+  @apply border-success text-success;
+  &:hover {
+    @apply bg-success text-white;
+  }
+}
+
+.btn-outline-warning {
+  border: 1px solid transparent;
+  @apply border-warning text-warning;
+  &:hover {
+    @apply bg-warning text-white;
+  }
+}
+
+.btn-outline-danger {
+  border: 1px solid transparent;
+  @apply border-danger text-danger;
+  &:hover {
+    @apply bg-danger text-white;
+  }
+}
+
+.btn-outline-info {
+  border: 1px solid transparent;
+  @apply border-info text-info;
+  &:hover {
+    @apply bg-info text-white;
+  }
+}
+
+.btn-outline-light {
+  border: 1px solid transparent;
+  @apply border-gray-light text-muted;
+  &:hover {
+    @apply bg-gray-light text-white;
+  }
+}
+.btn-outline-dark {
+  border: 1px solid transparent;
+  @apply border-gray-darker text-gray-darker;
+  &:hover {
+    @apply bg-gray-darker text-white;
+  }
+}
+
+
+.btn.block {
+  display: block !important;
+  text-align:center;
+  width:100%;
+}
+.btn-rounded {
+  border-radius: 99999px;
+  @apply px-4;
+}
+
+.flex > .btn, .flex > .btn-group > .btn {
+  margin-right: -1px;
+  &:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  &:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  &:not(:first-child):not(:last-child) {
+    border-radius: 0;
+  }
+}

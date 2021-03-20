@@ -1,0 +1,371 @@
+---
+title: Tailwind CSS Custom Alerts Design
+slug: ui-alerts
+---
+{% extends "../layouts/admin.html" %}
+
+{% block headerScripts %}
+<!-- Toastr -->
+<link type="text/css" href="../public/vendor/toastr/build/toastr.min.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<section class="max-w-6xl  mx-auto px-4">
+  <h1 class="my-8">Alerts</h1>
+  
+    <!-- COL -->
+     <div class="card">
+      <div class="card-header  bg-white">
+        <h4 class="card-header__title">Toast</h4>
+      </div>
+      <div class="card-body">
+        <p>Toasts based notifications can be used to to show important alerts or information to users.</p>
+        <div class="grid grid-cols-5 gap-4">
+          <div class="col">
+            <div class="text-center p-3">
+              <p class="text-label">Primary Example</p>
+              <button 
+                type="button" 
+                class="btn btn-primary"
+                data-toggle="toastr"
+                data-toastr-type="primary"
+                data-toastr-title="Heads up!"
+                data-toastr-message="This alert needs your attention, but it is not super important.">
+                Click me
+              </button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="text-center p-3">
+              <p class="text-label">Info Example</p>
+              <button 
+                type="button" 
+                class="btn btn-info"
+                data-toggle="toastr"
+                data-toastr-type="info"
+                data-toastr-title="Heads up!"
+                data-toastr-message="This alert needs your attention, but it is not super important.">
+                Click me
+              </button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="text-center p-3">
+              <p class="text-label">Warning Example</p>
+              <button 
+                type="button" 
+                class="btn btn-warning"
+                data-toggle="toastr"
+                data-toastr-type="warning"
+                data-toastr-title="Heads up!"
+                data-toastr-message="Check below fields please.">
+                Click me
+              </button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="text-center p-3">
+              <p class="text-label">Success Example</p>
+              <button 
+                type="button" 
+                class="btn btn-success"
+                data-toggle="toastr"
+                data-toastr-type="success"
+                data-toastr-title="Well Done!"
+                data-toastr-message="You successfully read this important alert message.">
+                Click me
+              </button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="text-center p-3">
+              <p class="text-label">Danger Example</p>
+              <button 
+                type="button" 
+                class="btn btn-danger"
+                data-toggle="toastr"
+                data-toastr-type="error"
+                data-toastr-title="Oh snap!"
+                data-toastr-message="Change a few things up and try submitting again.">
+                Click me
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-5 gap-4">
+          <div class="col">
+            <div class="text-center p-3">
+              <p class="text-label">Close Button</p>
+              <button 
+                type="button" 
+                class="btn btn-light"
+                data-toggle="toastr"
+                data-toastr-type="info"
+                data-toastr-title="null"
+                data-toastr-message="Set the closeButton to true and the toast will have a close button."
+                data-toastr-time-out="0"
+                data-toastr-extended-time-out="0"
+                data-toastr-progress-bar="false"
+                data-toastr-close-button="true">
+                Click me
+              </button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="text-center p-3">
+              <p class="text-label">Put some HTML in the text</p>
+              <button 
+                type="button" 
+                class="btn btn-light"
+                data-toggle="toastr"
+                data-toastr-type="info"
+                data-toastr-title="Can I add <em>icons</em>?"
+                data-toastr-message="Yes! check this <a href='https://github.com'>update</a>.">
+                Click me
+              </button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="text-center p-3">
+              <p class="text-label">Making them sticky</p>
+              <button 
+                type="button" 
+                class="btn btn-light"
+                data-toggle="toastr"
+                data-toastr-type="success"
+                data-toastr-title="null"
+                data-toastr-message="Set the timeOut and extendedTimeOut options to 0 and the toast will persist until selected."
+                data-toastr-time-out="0"
+                data-toastr-extended-time-out="0"
+                data-toastr-progress-bar="false">
+                Click me
+              </button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="text-center p-3">
+              <p class="text-label">Fade/Slide animation</p>
+              <button 
+                type="button" 
+                class="btn btn-light"
+                data-toggle="toastr"
+                data-toastr-type="info"
+                data-toastr-title="null"
+                data-toastr-message="Use the jQuery show/hide method of your choice. These default to fadeIn/fadeOut. The methods fadeIn/fadeOut, slideDown/slideUp, and show/hide are built into jQuery."
+                data-toastr-show-method="slideDown"
+                data-toastr-hide-method="slideUp"
+                data-toastr-close-method="slideUp">
+                Click me
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- COL -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+    <div class="card">
+      <div class="card-header  bg-white">
+          <h4 class="card-header__title">Alerts</h4>
+      </div>
+      <div class="card-body">
+          <p class="mb-4">Alerts are available for any length of text, as well as an optional dismiss button. For proper styling, use one of the eight contextual classes (i.e. <code>.alert-success</code>). For background color use class <code>.bg-*</code> and <code>.text-white</code>.</p>
+
+          <div class="alert alert-primary mb-4" role="alert">
+              <strong>Primary - </strong> A simple primary alert - check it out!
+          </div>
+          <div class="alert alert-secondary mb-4" role="alert">
+              <strong>Secondary - </strong> A simple secondary alert - check it out!
+          </div>
+          <div class="alert alert-success mb-4" role="alert">
+              <strong>Success - </strong> A simple success alert - check it out!
+          </div>
+          <div class="alert alert-danger mb-4" role="alert">
+              <strong>Danger - </strong> A simple danger alert - check it out!
+          </div>
+          <div class="alert alert-warning mb-4" role="alert">
+              <strong>Warning - </strong> A simple warning alert - check it out!
+          </div>
+          <div class="alert alert-info mb-4" role="alert">
+              <strong>Info - </strong> A simple info alert - check it out!
+          </div>
+          <div class="alert alert-light mb-4" role="alert">
+              <strong>Light - </strong> A simple light alert - check it out!
+          </div>
+          <div class="alert alert-dark" role="alert">
+              <strong>Dark - </strong> A simple dark alert - check it out!
+          </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-header  bg-white">
+          <h4 class="card-header__title">Dismissible Alerts</h4>
+      </div>
+      <div class="card-body">
+          <p class="mb-4">Add a button and the <code>.alert-dismissible</code> class, which adds extra padding to the right of the alert and positions the <code>.close</code> button.</p>
+
+          <div class="alert alert-dismissible bg-primary text-white mb-4" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+              </button>
+              <strong>Primary - </strong> A simple primary alert - check it out!
+          </div>
+
+          <div class="alert alert-dismissible bg-secondary text-white  mb-4" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+              </button>
+              <strong>Secondary - </strong> A simple secondary alert - check it out!
+          </div>
+
+          <div class="alert alert-dismissible bg-success text-white mb-4" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+              </button>
+              <strong>Success - </strong> A simple success alert - check it out!
+          </div>
+
+          <div class="alert alert-dismissible bg-danger text-white mb-4" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+              </button>
+              <strong>Danger - </strong> A simple danger alert - check it out!
+          </div>
+
+          <div class="alert alert-dismissible bg-warning mb-4" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+              </button>
+              <strong>Warning - </strong> A simple warning alert - check it out!
+          </div>
+
+          <div class="alert alert-dismissible bg-info text-white mb-4" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+              </button>
+              <strong>Info - </strong> A simple info alert - check it out!
+          </div>
+
+          <div class="alert alert-dismissible bg-gray-light mb-4" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+              </button>
+              <strong>Light - </strong> A simple light alert - check it out!
+          </div>
+
+          <div class="alert alert-dismissible bg-gray-dark text-white mb-4" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+              </button>
+              <strong>Dark - </strong> A simple dark alert - check it out!
+          </div>
+      </div>
+  </div>
+  </div>
+  
+  <!-- SOFT ALERTS -->
+  <div class="card">
+    <div class="card-header  bg-white">
+        <h4 class="card-header__title">Soft Alerts</h4>
+    </div>
+    <div class="card-body">
+        <p class="mb-4">Alternate styles for alerts with softer background color by replacing classes like <code>.alert-primary</code> with <code>.alert-soft-primary</code>. Alerts can also contain additional HTML elements like icons and paragraphs.</p>
+
+        <div class="grid grid-cols-2 gap-4">
+            <div class="col">
+                <div class="alert alert-soft-primary mb-4" role="alert">
+                    <i class="material-icons mr-3">flag</i>
+                    <div class="text-body"><strong>Tip:</strong> Holding <code>Shift</code> and pressing <code>Enter</code> will create a new line in your message without posting it in channel. Learn more about <a href="">formatting your messages</a>.</div>
+                </div>
+
+                <div class="alert alert-soft-success mb-4" role="alert">
+                    <i class="material-icons mr-3">edit</i>
+                    <div class="text-body"><strong>Note:</strong> If you have two-factor authentication turned on, you will need to enter the 6-digit authentication code we send to your phone.</div>
+                </div>
+
+                <div class="alert alert-soft-warning mb-4" role="alert">
+                    <i class="material-icons mr-3">error_outline</i>
+                    <div class="text-body"><strong>PRO and FREE versions are now available.</strong> Stack Admin is the easiest way to build or style your dashboard/application. Please visit our <a href="">product page</a> for more information.</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="alert alert-soft-secondary mb-4" role="alert">
+                    <i class="material-icons mr-3">adjust</i>
+                    <div class="text-body"><strong>Secondary - </strong> A simple secondary alert - check it out!.</div>
+                </div>
+                <div class="alert alert-soft-danger mb-4" role="alert">
+                    <i class="material-icons mr-3">error_outline</i>
+                    <div class="text-body"><strong>Danger - </strong> A simple danger alert - check it out!.</div>
+                </div>
+                <div class="alert alert-soft-info mb-4" role="alert">
+                    <i class="material-icons mr-3">info_outline</i>
+                    <div class="text-body"><strong>Info - </strong> A simple info alert - check it out!.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <!--  BADGES -->
+  <div class="grid grid-cols-2 gap-4">
+    
+        <div class="card">
+            <div class="card-header  bg-white">
+                <h4 class="card-header__title">Badges Regular</h4>
+            </div>
+            <div class="card-body">
+                <p class="mb-4">A small count and labeling component. Please read the <a href="https://getbootstrap.com/docs/4.1/components/badge/" target="_blank">official Bootstrap documentation</a> for a full list of options.</p>
+
+                <span class="badge badge-primary rounded">Primary</span>
+                <span class="badge badge-secondary rounded">Secondary</span>
+                <span class="badge badge-success rounded">Success</span>
+                <span class="badge badge-danger rounded">Danger</span>
+                <span class="badge badge-warning rounded">Warning</span>
+                <span class="badge badge-info rounded">Info</span>
+                <span class="badge badge-light rounded">Light</span>
+                <span class="badge badge-dark rounded">Dark</span><br><br>
+                <span class="badge badge-primary rounded-full">Primary</span>
+                <span class="badge badge-secondary rounded-full">Secondary</span>
+                <span class="badge badge-success rounded-full">Success</span>
+                <span class="badge badge-danger rounded-full">Danger</span>
+                <span class="badge badge-warning rounded-full">Warning</span>
+                <span class="badge badge-info rounded-full">Info</span>
+                <span class="badge badge-light rounded-full">Light</span>
+                <span class="badge badge-dark rounded-full">Dark</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header  bg-white">
+                <h4 class="card-header__title">Badges Soft</h4>
+            </div>
+            <div class="card-body">
+                <p class="mb-4">A variation of inversed badges color.</p>
+
+                <span class="badge badge-soft-primary rounded">Primary</span>
+                <span class="badge badge-soft-secondary rounded">Secondary</span>
+                <span class="badge badge-soft-success rounded">Success</span>
+                <span class="badge badge-soft-danger rounded">Danger</span>
+                <span class="badge badge-soft-warning rounded">Warning</span>
+                <span class="badge badge-soft-info rounded">Info</span>
+                <span class="badge badge-soft-light rounded">Light</span>
+                <span class="badge badge-soft-dark rounded">Dark</span><br><br>
+                <span class="badge badge-soft-primary rounded-full">Primary</span>
+                <span class="badge badge-soft-secondary rounded-full">Secondary</span>
+                <span class="badge badge-soft-success rounded-full">Success</span>
+                <span class="badge badge-soft-danger rounded-full">Danger</span>
+                <span class="badge badge-soft-warning rounded-full">Warning</span>
+                <span class="badge badge-soft-info rounded-full">Info</span>
+                <span class="badge badge-soft-light rounded-full">Light</span>
+                <span class="badge badge-soft-dark rounded-full">Dark</span>
+            </div>
+        </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block footerScripts %}
+<!-- Toastr -->
+<script src="../public/vendor/toastr/build/toastr.min.js"></script>
+<script src="../public/js/plugins/toastr.js"></script>
+{% endblock %}

@@ -1,0 +1,47 @@
+---
+title: Tailwind CSS Tabs
+slug: ui-tabs
+---
+{% extends "../layouts/admin.html" %}
+
+{% block content %}
+<section class="max-w-6xl  mx-auto px-4">
+  <h1 class="my-8">Tabs</h1>
+  <div >
+    <ul class="flex">
+      <li class="-mb-px mr-1">
+        <a class="tab-active inline-block  rounded-t py-2 px-4 text-blue-500 font-semibold" href="#">Overview</a>
+      </li>
+      <li class="mr-1">
+         <a class="inline-block  rounded-t py-2 px-4 text-blue-500 font-semibold" href="#">Pricing</a>
+      </li>
+    </ul>
+
+    <div>
+      <div class="card">
+        <div class="card-body">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos cupiditate repudiandae quas? Deserunt, nam eligendi quam ducimus possimus aspernatur praesentium?
+        </div>
+      </div>
+    </div>
+   
+
+     <div class="card">
+        <div class="card-header card-header-large bg-white d-flex align-items-center">
+          <h4 class="card-header__title flex m-0">Recent Activity</h4>
+        </div>
+        <div class="card-header card-header-tabs-basic nav" role="tablist">
+          <a href="#activity_all" class="active" data-toggle="tab" role="tab" aria-controls="activity_all" aria-selected="true">All</a>
+          <a href="#activity_purchases" data-toggle="tab" role="tab" aria-selected="false">Purchases</a>
+          <a href="#activity_emails" data-toggle="tab" role="tab" aria-selected="false">Emails</a>
+          <a href="#activity_quotes" data-toggle="tab" role="tab" aria-selected="false">Quotes</a>
+        </div>
+        <div class="card-body tab-content">
+          <div class="tab-pane active show fade" id="activity_all">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam itaque accusamus quis, qui consectetur vero ut molestiae quo! Modi, blanditiis laudantium, rem facilis sapiente, voluptate nihil amet reprehenderit neque harum quidem, eligendi totam aut? Rem, fuga architecto perferendis, voluptatum repellat quia hic aut consequatur ducimus quidem maiores, iste sit tempore.
+          </div>
+        </div>
+      </div>
+</div>
+</section>
+{% endblock %}

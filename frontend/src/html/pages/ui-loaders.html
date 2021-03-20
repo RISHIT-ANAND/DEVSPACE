@@ -1,0 +1,66 @@
+---
+title: Tailwind CSS Loaders
+slug: ui-loaders
+---
+{% extends "../layouts/admin.html" %}
+
+{% block content %}
+<section class="max-w-6xl  mx-auto px-4">
+  <h1 class="my-8">Loaders</h1>
+   <div class="flex">
+    <div class="w-1/2 mr-4">
+      <div class="card">
+        <div class="card-header card-header-large bg-white">
+          <h4 class="card-header__title">Sizes</h4>
+        </div>
+        <div class="card-body">
+          <p>A simple yet versatile animated spinner component. Add <code>.loader-[sm|lg]</code> or <code>.is-loading-[sm|lg]</code> to create loaders at different sizes.</p>
+          <div class="loader-list">
+            <div class="loader loader-lg"></div>
+            <div class="loader"></div>
+            <div class="loader loader-sm"></div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Loader Helper</h2>
+      <p class="text-sm mb-4">Indicate loading state of nearly any component with an <code>.is-loading</code> modifier.</p>
+
+      <div class="card">
+        <div class="card-header card-header-large bg-white">
+          <h4 class="card-header__title">Loading card</h4>
+        </div>
+        <div class="card-body is-loading is-loading-lg">
+          Loading content
+        </div>
+      </div>
+
+      <div class="button-list">
+        <a href="#" class="btn btn-lg btn-primary is-loading">Button</a>
+        <a href="#" class="btn btn-outline-primary is-loading is-loading-sm">Button</a>
+      </div>
+    </div>
+    <div class="w-1/2">
+      <div class="card">
+        <div class="card-header card-header-large bg-white">
+          <h4 class="card-header__title">Colors</h4>
+        </div>
+        <div class="card-body">
+          <p>Using typical naming structure i.e. <code>.loader-primary</code>, you can create colored loaders depending on your needs.</p>
+
+          <div class="loader-list">
+            <div class="loader loader-primary"></div>
+            <div class="loader loader-secondary"></div>
+            <div class="loader loader-success"></div>
+            <div class="loader loader-danger"></div>
+            <div class="loader loader-warning"></div>
+            <div class="loader loader-info"></div>
+            <div class="loader loader-dark"></div>
+            <div class="loader loader-light"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

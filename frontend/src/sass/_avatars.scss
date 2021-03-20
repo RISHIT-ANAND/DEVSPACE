@@ -1,0 +1,16 @@
+
+.avatar {
+  @apply inline-flex relative;
+}
+
+.avatar-status {
+  @apply absolute rounded-full border-2 border-white;
+}
+.shadow-solid {
+  box-shadow: 0 0 0 2px currentColor;
+}
+
+.card-dark {
+  @apply bg-gray-light;
+  
+}

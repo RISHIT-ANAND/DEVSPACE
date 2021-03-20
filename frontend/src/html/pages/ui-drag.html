@@ -1,0 +1,169 @@
+---
+title: Tailwind CSS Drag & Drop Dragula
+slug: ui-drag
+leftcards:
+  - avatar: https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=80&amp;h=80&amp;q=80
+    name: Jenell D. Matney
+    title: Founder and CEO
+
+  - avatar: https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=80&amp;h=80&amp;q=80
+    name: Jenell D. Matney
+    title: Founder and CEO
+
+  - avatar: https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=80&amp;h=80&amp;q=80
+    name: Sherri J. Cardenas
+    title: Software Engineer
+    
+  - avatar: https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=80&amp;h=80&amp;q=80
+    name: Joseph S. Ferland
+    title: Web Designer
+rightcards:
+  - avatar: https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=80&amp;h=80&amp;q=80
+    name: Bryan K. Davis
+    title: Web Developer
+
+  - avatar: https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=80&amp;h=80&amp;q=80
+    name: Elizabeth J. Ohara
+    title: Business Analyst
+
+  - avatar: https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=80&amp;h=80&amp;q=80
+    name: Kaci M. Langston
+    title: Human Resources
+---
+{% extends "../layouts/admin.html" %}
+
+{% import "components/user-feedback.html" as feedback %}
+{% import "components/user-handle.html" as user %}
+
+{% block headerScripts %}
+<!-- Dragula -->
+<link type="text/css" href="../public/vendor/dragula/dist/dragula.min.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<section class="max-w-6xl  mx-auto px-4">
+  <h1 class="my-8">Drag & Drop</h1>
+  <div class="card">
+    <div class="card-header card-header-large bg-white">
+      <h4 class="card-header__title">Simple Drag and Drop</h4>
+    </div>
+    <div class="card-body">
+      <p>Just add the data attribute <code>data-toggle="dragula"</code> to have drag and drop support in your container.</p>
+
+      <div class="grid grid-cols-3 gap-4" data-toggle="dragula">
+        
+          <div class="card text-white bg-primary rounded">
+              <div class="card-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+              </div> <!-- end card-body-->
+          </div> <!-- end card-->
+        
+        
+          <div class="card bg-secondary text-white rounded">
+            <div class="card-body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            </div> <!-- end card-body-->
+          </div> <!-- end card-->
+        
+        
+          <div class="card text-white bg-success rounded">
+            <div class="card-body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            </div> <!-- end card-body-->
+          </div> <!-- end card-->
+        
+        
+        
+          <div class="card text-white bg-info rounded">
+            <div class="card-body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            </div> <!-- end card-body-->
+          </div> <!-- end card-->
+        
+
+        
+          <div class="card text-white bg-warning rounded">
+            <div class="card-body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            </div> <!-- end card-body-->
+          </div> <!-- end card-->
+        
+
+        
+          <div class="card text-white bg-danger rounded">
+            <div class="card-body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            </div> <!-- end card-body-->
+          </div> <!-- end card-->
+        
+
+      </div>
+    </div>
+  </div>
+
+  <h2>Containers</h2>
+  <p>Add the data attribute <code>data-dragula-containers='["#cards-left", "#cards-right"]'</code> to allow the user to drag an element in any of the containers and drop it in any other container in the list.</p>
+
+  <div class="grid grid-cols-2 gap-4" data-toggle="dragula" data-dragula-containers='["#cards-left", "#cards-right"]'>
+    
+      <div class="card shadow-none border-2 border-muted bg-gray-light">
+        <div class="card-body">
+          <div class="text-label mb-3">Container #1</div>
+          <div id="cards-left" class="card-list">
+            {% for card in leftcards %}
+              {{ feedback.component(card.avatar, card.name, card.title) }}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="card shadow-none border-2 border-muted bg-gray-light">
+        <div class="card-body">
+          <div class="text-label mb-3">Container #2</div>
+          <div id="cards-right" class="card-list">
+            {% for card in rightcards %}
+              {{ feedback.component(card.avatar, card.name, card.title) }}
+            {% endfor %}
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <h2>Handles</h2>
+  <p>Add the data attribute <code>data-dragula-moves="js-dragula-handle"</code> to allow the user to drag an element in any of the containers and drop it in any other container in the list <strong>using a handle</strong>.</p>
+
+  <div 
+    class="grid grid-cols-2 gap-4 bg-d" 
+    data-toggle="dragula" 
+    data-dragula-containers='["#cards-moves-left", "#cards-moves-right"]'
+    data-dragula-moves="js-dragula-handle">
+    
+      <div class="card shadow-none border-2 border-muted bg-gray-light">
+        <div class="card-body">
+          <div class="text-label mb-3">Container #1</div>
+          <div id="cards-moves-left" class="card-list">
+            {% for card in leftcards %}
+              {{ user.component(card.avatar, card.name, card.title) }}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    
+      <div class="card shadow-none border-2 border-muted bg-gray-light">
+        <div class="card-body">
+          <div class="text-label mb-3">Container #2</div>
+          <div id="cards-moves-right" class="card-list">
+            {% for card in rightcards %}
+              {{ user.component(card.avatar, card.name, card.title) }}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block footerScripts %}
+<!-- Dragula -->
+<script src="../public/vendor/dragula/dist/dragula.min.js"></script>
+<script src="../public/js/plugins/dragula.js"></script>
+{% endblock %}

@@ -1,0 +1,79 @@
+---
+title: Things to do
+slug: page
+---
+{% extends "../layouts/default.html" %}
+
+{% block content %}
+  <section class="max-w-6xl  mx-auto px-4 my-16 ">
+    <div class="text-center mb-16">
+      {% include '../components/headings/heading_one.html' with { title: "Pricing Plans", subtitle: 'IOTask Includes everything you need for UI and UX part for project and task management service, todo apps, CRM systems, and any other SAAS platform.' } only %}
+    </div>
+    
+    
+    <!-- PRICING CARDS -->
+    <div class="flex pb-16">
+      <div class="w-1/4 mr-4">
+        <div class="p-8 shadow-xl text-center">
+          <div class="leading-none mb-4">
+
+          <div class="mb-2 font-semibold">Basic</div> 
+          <div class="text-6xl font-semibold">FREE</div>
+          </div>
+          <ul class="text-gray-500 text-sm mb-8">
+              <li>HTML Files Included</li>
+              <li>48h Support</li>
+              <li>Premium Icons</li>
+            </ul>
+        <a class="lg:p-2 lg:px-4 bg-blue-500 hover:bg-blue-600 rounded-full text-white {% if page.url == '/get-unlimited.html' %}text-blue-500{% endif %}" href="get-unlimited">Get Started</a>
+        </div>
+      </div>
+      <div class="w-1/4 mr-4 ">
+        <div class="p-8 shadow-xl text-center">
+          <div class="leading-none mb-4">
+
+          <div class="mb-2 font-semibold">Developer</div> 
+          <div class="text-6xl font-semibold">$29<span class="text-sm">/month</span></div>
+          </div>
+          <ul class="text-gray-500 text-sm mb-8">
+              <li>HTML Files Included</li>
+              <li>48h Support</li>
+              <li>Premium Icons</li>
+            </ul>
+        <a class="btn btn-purple" href="get-unlimited">Get Started</a>
+        </div>
+      </div>
+      <div class="w-1/4 mr-4">
+        <div class="p-8 shadow-xl text-center">
+          <div class="leading-none mb-4">
+
+          <div class="mb-2 font-semibold">Teams</div> 
+          <div class="text-6xl font-semibold">$49<span class="text-sm">/month</span></div>
+          </div>
+          <ul class="text-gray-500 text-sm mb-8">
+              <li>HTML Files Included</li>
+              <li>48h Support</li>
+              <li>Premium Icons</li>
+            </ul>
+        <a class="btn btn-purple" href="get-unlimited">Get Started</a>
+        </div>
+      </div>
+      <div class="w-1/4">
+        <div class="p-8 shadow-xl text-center">
+          <div class="leading-none mb-4">
+
+          <div class="mb-2 font-semibold">Enterprise</div> 
+          <div class="text-6xl font-semibold">$149<span class="text-sm">/month</span></div>
+          </div>
+          <ul class="text-gray-500 text-sm mb-8">
+              <li>HTML Files Included</li>
+              <li>48h Support</li>
+              <li>Premium Icons</li>
+            </ul>
+          <a class="btn btn-purple" href="get-unlimited">Get Started</a>
+        </div>
+      </div>
+    </div>
+    <!-- END PRICING CARDS -->
+  </section>
+{% endblock %}

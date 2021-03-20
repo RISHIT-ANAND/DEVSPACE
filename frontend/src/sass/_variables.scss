@@ -1,0 +1,113 @@
+$body-color:  #353535;
+$border-color: #ccc;
+$primary:          #1377c9;
+$primary-light:          #d0e4f4;
+$primary-darker:           #0a3e69;
+$secondary:          #262f36;
+$secondary-light:          #d4d5d7;
+$secondary-darker:           #14181c;
+$success:          #17b15c;
+$success-light:          #d1efde;
+$success-darker:           #0c5c30;
+$warning:          #FFB905;
+$warning-light:          #fcf4db;
+$warning-darker:           #7d6928;
+$danger:           #bb3434;
+$danger-light:           #f1d6d6;
+$danger-darker:          #611b1b;
+$info:           #13c0c9;
+$info-light:           #d0f2f4;
+$info-darker:          #0a6469;
+
+$gray-darker: #262626;
+$gray-dark: #888888;
+$dark: #262626;
+$gray-light: #f9f9f9;
+$link: #3687e4;
+
+$border-color: #efefef;
+$input-bg: $gray-light;
+$border-radius: 5px;
+$layout-mini-drawer-width:          64px !default;
+
+// COLORS 
+$theme-colors: (
+  'black': #000000,
+  'darker': rgba(0,0,0,.24),
+  'light': #939FAD,
+  'white': #ffffff,
+  'primary': $primary,
+  'primary-light': $primary-light,
+  'primary-darker': $primary-darker,
+  'secondary': $secondary,
+  'secondary-light': $secondary-light,
+  'secondary-darker': $secondary-darker,
+  'success': $success,
+  'success-light': $success-light,
+  'success-darker': $success-darker,
+  'warning': $warning,
+  'warning-light': $warning-light,
+  'warning-darker': $warning-darker,
+  'danger': $danger,
+  'danger-light': $danger-light,
+  'danger-darker': $danger-darker,
+  'info': $info,
+  'info-light': $info-light,
+  'info-darker': $info-darker,
+  'muted': #cccccc,
+  'gray-darker': $gray-darker,
+  'gray-dark': $gray-dark,
+  'dark': $dark,
+  'gray-light': $gray-light,
+  'link': #3687e4,
+  'border-color': $border-color
+) !default;
+
+/* SET TAILWIND COLORS VARIABLES */
+:root {
+  @each $color, $value in $theme-colors {
+    --color-#{$color}: #{$value};
+  }
+/* ... */
+}
+
+
+
+$navbar-height:                     58px !default;
+$grid-gutter-width:                 2rem;
+
+// SIDEBAR
+// Heading
+$sidebar-heading-font-size:         .725rem !default;
+$sidebar-heading-font-weight:       600 !default;
+$sidebar-spacing-x:                 1.25rem !default;
+$sidebar-spacing-y:                 1rem !default;
+
+$sidebar-light-heading-color:       rgba(0,0,0,.24);
+$sidebar-light-link-color:         rgba(0,0,0,.54);
+$sm-light-icon-color:         rgba(0,0,0,.54);
+
+$sm-button-font-size:               .925rem;
+$sm-button-font-weight:             600;
+$sm-icon-font-size:                 16px;
+
+$sidebar-dark-link-color:           rgba(255,255,255,.54);
+$sidebar-dark-heading-color:        rgba(255,255,255,.24);
+$sm-dark-active-button-color:       #ffffff;
+
+// 
+$white:                         #ffffff !default;
+$dark-gray:                         #939FAD !default;
+$light:                         #939FAD !default;
+
+$material-design-icons-font-path: '../vendor/material-design-icons-iconfont/dist/fonts/' !default;
+
+// Sidebar style guide (default)
+@import 'sidebar-style-guide/sass/variables';
+
+// MDK (default)
+@import 'material-design-kit/src/variables';
+
+.border-default {
+ border-color: $border-color;
+}

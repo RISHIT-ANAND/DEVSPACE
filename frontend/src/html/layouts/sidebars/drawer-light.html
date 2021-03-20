@@ -1,0 +1,84 @@
+<div class="mdk-drawer {{ drawerClass or '' }} js-mdk-drawer" id="default-drawer" data-align="{{ drawerAlign }}">
+  <div class="mdk-drawer__content">
+    <div class="sidebar sidebar-light sidebar-left bg-white" data-perfect-scrollbar>
+
+       <div class="sidebar-p-a sidebar-account text-center border-b-2 border-default">
+        <div class="text-underline-0 text-body text-center mb-2">
+          <div class="avatar w-24 h-24 mr-2">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="Avatar" class="rounded-full p-1 border-gray-light border-1">
+          </div>
+          <div class="leading-none">
+
+            <a href="#" class="mb-0 text-gray-darker block"><strong>Adrian Demian</strong></a>
+          
+            <small class="text-gray-dark text-sm">Senior Account Manager</small>
+          </div>
+          
+        </div>
+
+
+        <div class="text-center">
+          <a href="#" class="btn btn-primary btn-sm">View Profile</a>
+        </div>
+        
+      </div>
+      <div class="bg-gray-light -mt-5">
+        <div class="sidebar-heading pt-4">Information</div>
+        <div class="sidebar-block pb-2 border-b-2 border-default ">
+          <ul>
+            <li class="flex items-center mb-1">
+              <div class="mr-2"><i class="material-icons align-middle -mt-1 text-muted">business</i></div>
+              <div><a href="#" class="font-semibold text-gray-darker">ACME Solutions</a></div>
+            </li>
+            <li class="flex items-center mb-1">
+              <div class="mr-2"><i class="material-icons align-middle -mt-1 text-muted">group</i></div>
+              <div>33 Employees</div>
+            </li>
+            <li class="flex items-center mb-1">
+              <div class="mr-2"><i class="material-icons align-middle -mt-1 text-muted">phone</i></div>
+              <div>+1 91238 228</div>
+            </li>
+            <li class="flex items-center mb-1">
+              <div class="mr-2"><i class="material-icons align-middle -mt-1 text-muted">email</i></div>
+              <div><a href="#" class="text-primary">contact@frontted.com</a></div>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+      
+
+ 
+      <div class="sidebar-heading sidebar-m-t">DEMOS</div>
+      <ul class="sidebar-menu" id="demos_menu">
+        {% include '_menu.demos.html' %}  
+      </ul>
+      
+   
+
+      <div class="sidebar-heading sidebar-m-t">Collapse</div>
+      <ul class="sidebar-menu">
+        <li class="sidebar-menu-item ">
+          <a class="sidebar-menu-button" data-toggle="collapse" href="#collapse_menu">
+            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">list</i>
+            <span class="sidebar-menu-text">Submenu</span>
+            <span class="ml-auto sidebar-menu-toggle-icon"></span>
+          </a>
+          <ul class="sidebar-submenu sidebar-collapse collapse" id="collapse_menu">
+            <li class="sidebar-menu-item">
+              <a class="sidebar-menu-button" href="#">
+                <span class="sidebar-menu-text">Menu Item</span>
+              </a>
+            </li>
+            <li class="sidebar-menu-item">
+              <a class="sidebar-menu-button" href="#">
+                <span class="sidebar-menu-text">Menu Item</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</div>

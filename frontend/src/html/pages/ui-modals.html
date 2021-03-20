@@ -1,0 +1,215 @@
+---
+title: Tailwind CSS Custom Modal Design
+slug: ui-modals
+---
+{% extends "../layouts/admin.html" %}
+
+{% block content %}
+<section class="max-w-6xl  mx-auto px-4">
+  <h1 class="my-8">Modals</h1>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+    <!-- COL -->
+   <div class="card">
+      <div class="card-header">
+          <h4 class="card-header__title">Basic Modals</h4>
+      </div>
+      <div class="card-body button-list">
+          <p class="mb-4">A rendered modal with header, body, and set of actions in the footer.</p>
+          <button  type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-standard">Standard Modal</button>
+          <button  type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-large">Large Modal</button>
+          <button  type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-small">Small Modal</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+          <h4 class="card-header__title">Pages</h4>
+      </div>
+      <div class="card-body button-list">
+          <p class="mb-4">Examples of modals with custom content.</p>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-login">Sign Up Modal</button>
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-login">Login Modal</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+          <h4 class="card-header__title">Alerts</h4>
+      </div>
+      <div class="card-body">
+          <p class="mb-4">Show different contexual alert messages using modal component.</p>
+          <button  data-toggle="modal" data-target="#modal-alert"  type="button" class="btn btn-success">Success Alert</button>
+          <button  data-toggle="modal" data-target="#modal-alert" type="button" class="btn btn-info">Info Alert</button>
+          <button  data-toggle="modal" data-target="#modal-alert" type="button" class="btn btn-warning">Warning Alert</button>
+          <button  data-toggle="modal" data-target="#modal-alert" type="button" class="btn btn-danger">Error Alert</button>
+      </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header card-header-large bg-white">
+            <h4 class="card-header__title">Vertically Centered</h4>
+        </div>
+        <div class="card-body button-list">
+            <p>By default, modals will be positioned at the top of the page, but you can change this to vertically centered  element.</p>
+            <button  data-toggle="modal" data-target="#modal-alert"  type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-center">Vertically Centered Modal</button>
+        </div>
+    </div>
+  </div>
+
+</section>
+{% endblock %}
+
+{% block footer %}
+
+ <!-- STANDARD MODAL -->
+ <div tabindex="0" class="modal" id="modal-standard">
+        <div class="modal-dialog max-w-full" style="width: 600px;">
+            <div class="bg-white rounded shadow-lg flex flex-col overflow-hidden">
+                <button class="text-muted h-6 w-6 absolute right-0 top-0 m-6 font-3xl font-bold">&times;</button>
+                <div class="px-6 py-3 text-xl border-b border-muted font-bold  bg-gray-light">Title of the modal</div>
+                <div class="p-6 flex-grow">
+                    <p>You are watching this text in tailwind css model with alpine JS.</p>
+                </div>
+                <div class="px-6 py-3 border-t border-muted text-right bg-gray-light">
+                    
+                        <button type="button" class="btn btn-light">Close</button>
+                        <button type="button" class="btn btn-primary">Saves Changes</button>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="modal-backdrop"></div>
+  </div>
+  <!-- END STANDARD MODAL -->
+
+
+   <!-- LARGE MODAL -->
+ <div id="modal-large" tabindex="0" class="modal">
+        <div class="modal-dialog max-w-full" style="width: 1000px;">
+            <div class="bg-white rounded shadow-lg flex flex-col overflow-hidden">
+                <button class="text-muted h-6 w-6 absolute right-0 top-0 m-6 font-3xl font-bold">&times;</button>
+                <div class="px-6 py-3 text-xl border-b border-muted font-bold  bg-gray-light">Title of the modal</div>
+                <div class="p-6 flex-grow">
+                    <p>You are watching this text in tailwind css model with alpine JS.</p>
+                </div>
+                <div class="px-6 py-3 border-t border-muted text-right bg-gray-light">
+                    
+                        <button type="button" class="btn btn-light">Close</button>
+                        <button type="button" class="btn btn-primary">Saves Changes</button>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="modal-backdrop"></div>
+  </div>
+  <!-- END LARGE MODAL -->
+
+  <!-- SMALL MODAL -->
+  <div id="modal-small" tabindex="0" class="modal">
+        <div class="modal-dialog max-w-full" style="width: 300px;">
+            <div class="bg-white rounded shadow-lg flex flex-col overflow-hidden">
+                <button class="text-muted h-6 w-6 absolute right-0 top-0 m-6 font-3xl font-bold">&times;</button>
+                <div class="px-6 py-3 text-xl border-b border-muted font-bold  bg-gray-light">Title of the modal</div>
+                <div class="p-6 flex-grow">
+                    <p>You are watching this text in tailwind css model with alpine JS.</p>
+                </div>
+                <div class="px-6 py-3 border-t border-muted text-right bg-gray-light">
+                    
+                        <button type="button" class="btn btn-light">Close</button>
+                        <button type="button" class="btn btn-primary">Saves Changes</button>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="modal-backdrop"></div>
+  </div>
+  <!-- END SMALL MODAL -->
+
+
+<!-- LOGIN MODAL -->
+<div id="modal-login" tabindex="0" class="modal">
+        <div class="modal-dialog max-w-full" style="width: 500px;">
+            <div class="bg-white rounded shadow-lg flex flex-col overflow-hidden">
+
+              <div class="card p-4 mb-0">
+              <div class="flex place-content-center items-center pt-4">
+              <a href="index.html" class="flex items-center text-xl mr-4 hover:no-underline ">
+                
+                  <span class="mr-1 -mt-1 text-primary"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path></svg></span>
+                  <span><strong>TailStack</strong></span>
+              </a>
+              </div>
+              <p class="m-0 text-lg text-center mb-8 text-gray-dark">Login to access your Stack Account </p>
+              
+                  
+            
+                  <div class="alert alert-soft-success flex mb-3" role="alert">
+                      <i class="material-icons mr-3">check_circle</i>
+                      <div class="text-body">An email with password reset instructions has been sent to your email address, if it exists on our system.</div>
+                  </div>
+
+                  <a href="" class="btn btn-light btn-block flex place-content-center items-center mb-8">
+                      <div class="mr-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 1792 1792"><path fill="currentColor" d="M896 786h725q12 67 12 128 0 217-91 387.5t-259.5 266.5-386.5 96q-157 0-299-60.5t-245-163.5-163.5-245-60.5-299 60.5-299 163.5-245 245-163.5 299-60.5q300 0 515 201l-209 201q-123-119-306-119-129 0-238.5 65t-173.5 176.5-64 243.5 64 243.5 173.5 176.5 238.5 65q87 0 160-24t120-60 82-82 51.5-87 22.5-78h-436v-264z"/></svg>
+                      </div>
+                      Continue with Google
+                  </a>
+
+                  <div class="page-separator mb-8">
+                      <div class="page-separator__text">or</div>
+                  </div>
+
+                  <form action="admin.html" novalidate="">
+                      <div class="form-group">
+                          <label class="text-label" for="email_2">Email Address:</label>
+                          <div class="input-group input-group-merge">
+                              <input id="email_2" type="email" required="" class="form-control form-control-prepended" placeholder="john@doe.com">
+                              <div class="input-group-prepend">
+                                  <div class="input-group-text">
+                                      <span class="far fa-envelope"></span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label class="text-label" for="password_2">Password:</label>
+                          <div class="input-group input-group-merge">
+                              <input id="password_2" type="password" required="" class="form-control form-control-prepended" placeholder="Enter your password">
+                              <div class="input-group-prepend">
+                                  <div class="input-group-text">
+                                      <span class="fa fa-key"></span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <button class="btn block btn-primary" type="submit">Login</button>
+                      </div>
+                    
+                      <div class="form-group text-center">
+                          <a href="admin.html" class="text-primary underline">Forgot password?</a> <br>
+                          Don't have an account? <a class="text-primary underline" href="admin.html">Sign up!</a>
+                      </div>
+                  </form>
+              </div>
+        </div>
+      </div>
+  <div class="modal-backdrop"></div>
+  </div>      
+</div>
+<!-- LOGIN MODAL -->
+
+<!-- ALERT MODAL -->
+<div id="modal-alert" tabindex="0" class="modal  h-full flex justify-center items-center">
+        <div
+        class="z-50 relative  p-3 m-auto my-0 max-w-full" style="width: 600px;">
+            <div class="bg-success text-white rounded shadow-lg flex flex-col overflow-hidden">
+                <div class="p-6 flex-grow">
+                    <p>You are watching this text in tailwind css - Colors can be changed easily.</p>
+                </div>
+               
+            </div>
+        </div>
+        <div class="modal-backdrop"></div>
+  </div>
+<!-- END ALERT MODAL -->
+{% endblock %}

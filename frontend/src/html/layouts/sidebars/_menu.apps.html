@@ -1,0 +1,31 @@
+<li class="sidebar-menu-item{% if slug === 'app-trello' %} active{% endif %}">
+  <a class="sidebar-menu-button" href="{{ prefix or '' }}app-trello.html">
+    <span class="sidebar-menu-text">Trello</span>
+  </a>
+</li>
+<li class="sidebar-menu-item{% if slug === 'app-projects' %} active{% endif %}">
+    <a class="sidebar-menu-button" href="{{ prefix or '' }}app-projects.html">
+      <span class="sidebar-menu-text">Projects</span>
+    </a>
+  </li>
+  <li class="sidebar-menu-item{% if slug === 'app-activities' %} active{% endif %}">
+    <a class="sidebar-menu-button" href="{{ prefix or '' }}app-activities.html">
+      <span class="sidebar-menu-text">Activities</span>
+      <span class="badge badge-primary ml-auto rounded">NEW</span>
+    </a>
+  </li>
+<li class="sidebar-menu-item{% if slug === 'app-fullcalendar' %} active{% endif %}">
+  <a class="sidebar-menu-button" href="{{ prefix or '' }}app-fullcalendar.html">
+    <span class="sidebar-menu-text">Event Calendar</span>
+  </a>
+</li>
+<li class="sidebar-menu-item{% if slug === 'app-chat' %} active{% endif %}">
+  <a class="sidebar-menu-button" href="{{ prefix or '' }}app-chat.html">
+    <span class="sidebar-menu-text">Chat</span>
+  </a>
+</li>
+<li class="sidebar-menu-item{% if slug === 'app-email' %} active{% endif %}">
+  <a class="sidebar-menu-button" href="{{ prefix or '' }}app-email.html">
+    <span class="sidebar-menu-text">Email</span>
+  </a>
+</li>
