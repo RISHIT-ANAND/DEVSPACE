@@ -44,11 +44,15 @@ schedule.scheduleJob('0 0 * * *', () => {
                 text: 'Please click this link to view our initial prices https://proc-assist.herokuapp.com/'+val["vpid"]
             };  
             transporter.sendMail(mailOptions, function(error, info){
-            if (error) {
-                console.log(error);
-            } else {
-                console.log('Email sent: ' + info.response);
-            }
+                if (error) {
+                    console.log(error);
+                } 
+                else {
+                    console.log('Email sent: ' + info.response);
+                    connection.query(`UPDATE vp set datesent = curdate() where vpid=${val["vpid"]}`, function (error, results, fields) {
+                        if (error) throw error;
+                    });
+                }
             });
                 
         });
@@ -117,6 +121,15 @@ app.get('/:agreeId',(req,res)=>{
     }
     
     function sendq(){
+        var dff=15;
+        connection.query(`SELECT datediff(datesent,curdate()) as dff from vp where vpid=${req.params.agreeId})`, (error, resultsp, fields) =>{
+            if (error) 
+                console.log(error);
+            else
+                dff=resultsp['dff'];
+        });
+        if(dff<8)
+            res.send("Sorry date over ma");
         if(correct)
             res.render(__dirname + "/vendorForm", {name:sendnames["vendorname"],agreeId:req.params.agreeId});
         else
