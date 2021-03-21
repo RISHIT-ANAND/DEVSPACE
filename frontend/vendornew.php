@@ -23,7 +23,6 @@ tr:nth-child(even) {background-color: #f2f2f2}
 <tr>
 <th> Vendor ID</th>
 <th> Vendor Name</th>
-<th> Vendor Phone</th>
 <th> Vendor Email</th>
 <th> Product ID</th>
 <th> Product Name</th>
@@ -47,16 +46,35 @@ $resultreturn = $conn->query($sqlreturn);
 
 if ($resultreturn->num_rows > 0) {
 // output data of each row
+
+$myArray[] = null; 
+$i=0;
 while($row = $resultvendor->fetch_assoc()) {
-echo "<tr><td>" . $row["vendorid"]. "</td><td>" . $row["vendorname"] . "</td><td>"
-. $row["email"]. "</td>";
+
+    $myArray[i]->vendorid = $row["vendorid"];
+    $myArray[i]->vendorname = $row["vendorname"];
+    $myArray[i]->email = $row["email"];
+    $i=$i+1;
 }
+$i=0;
 while($row = $resultproduct->fetch_assoc()) {
-    echo "<td>" . $row["productid"]. "</td><td>" . $row["productname"] . "</td>";
+    $myArray[i]->productid = $row["productid"];
+    $myArray[i]->productname = $row["productname"];
+    $i=$i+1;
 }
+$i=0;
 while($row = $resultreturn->fetch_assoc()) {
-    echo "<td>" . $row["agreementdate"]. "</td><td>" . $row["expirydate"] . "</td><td>"
-    . $row["price"]. "</td><td>" . $row["collect"] . "</td></tr>";
+    $myArray[i]->agreementdate = $row["agreementdate"];
+    $myArray[i]->expirydate = $row["expirydate"];
+    $myArray[i]->price = $row["price"];
+    $myArray[i]->collect = $row["collect"];
+    $i=$i+1;
+}
+foreach($myArray as $val){
+    echo "<tr><td>" . $myArray[i]->vendorid . "</td><td>" . $myArray[i]->vendorid . "</td><td>"
+. $myArray[i]->email . "</td><td>" . $myArray[i]->productid . "</td><td>" . $myArray[i]->productname . "</td><td>"
+. $myArray[i]->agreementdate . "</td><td>" . $myArray[i]->expirydate . "</td><td>"
+. $myArray[i]->price . "</td><td>" . $myArray[i]->collect . "</td></tr>";
 }
 echo "</table>";
 } else { echo "0 results"; }
