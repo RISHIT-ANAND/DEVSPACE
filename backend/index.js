@@ -4,6 +4,7 @@ const path = require('path');
 var nodemailer = require('nodemailer');
 var schedule = require('node-schedule');
 const bodyParser = require('body-parser');
+require('dotenv').config();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -14,20 +15,18 @@ app.engine('html', require('ejs').renderFile);
 app.use('/:agreeId',express.static(path.join(__dirname, 'vendorForm')));
 app.use('/:agreeId',express.static(path.join(__dirname, 'typage')));
 
-
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'procurementassistantvit21@gmail.com',
-      pass: 'N0sleept0d@y'
-    }
+      user: process.env.usermail,
+      pass: process.env.passmail    }
 });
 var mysql      = require('mysql');
 var connection = mysql.createPool({
-    host     : 'remotemysql.com',
-    user     : 'Uiz0hUNUje',
-    password : 'k24nEVIJ78',
-    database : 'Uiz0hUNUje'
+    host     : process.env.hostsql,
+    user     : process.env.usersql,
+    password : process.env.passsql,
+    database : process.env.databasesql
 });
 //connection.connect();
 var sendres=null;
@@ -106,15 +105,15 @@ app.get('/:agreeId',(req,res)=>{
     
     function sendq(){
         var dff=15;
-        connection.query(`SELECT datediff(datesent,curdate()) as dff from vp where vpid=${req.params.agreeId}`, (error, resultsp, fields) =>{
+        connection.query(`SELECT datediff(curdate(),datesent) as dff from vp where vpid=${req.params.agreeId}`, (error, resultsp, fields) =>{
             if (error) 
                 console.log(error);
             else
                 dff=resultsp['dff'];
         });
-        if(dff>8)
+        if(dff<8)
         res.render(__dirname + "/typage/linkexpired.ejs");
-        if(correct)
+        else if(correct)
             res.render(__dirname + "/vendorForm", {name:sendnames["vendorname"],agreeId:req.params.agreeId});
         else
             res.send("404 not found");
