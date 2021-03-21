@@ -112,7 +112,7 @@ app.get('/:agreeId',(req,res)=>{
             else
                 dff=resultsp['dff'];
         });
-        if(dff<8)
+        if(dff>8)
         res.render(__dirname + "/typage/linkexpired.ejs");
         if(correct)
             res.render(__dirname + "/vendorForm", {name:sendnames["vendorname"],agreeId:req.params.agreeId});
