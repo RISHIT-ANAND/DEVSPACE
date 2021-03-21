@@ -23,7 +23,6 @@ tr:nth-child(even) {background-color: #f2f2f2}
 <tr>
 <th> Vendor ID</th>
 <th> Vendor Name</th>
-<th> Vendor Phone</th>
 <th> Vendor Email</th>
 <th> Product ID</th>
 <th> Product Name</th>
