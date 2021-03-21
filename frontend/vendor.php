@@ -21,9 +21,16 @@ tr:nth-child(even) {background-color: #f2f2f2}
 <body>
 <table>
 <tr>
-<th> Product Id</th>
+<th> Vendor ID</th>
+<th> Vendor Name</th>
+<th> Vendor Phone</th>
+<th> Vendor Email</th>
+<th> Product ID</th>
+<th> Product Name</th>
 <th>Signing date</th>
 <th>Expiry date</th>
+<th>Price</th>
+<th>Pickup</th>
 </tr>
 <?php
 $conn = mysqli_connect("remotemysql.com", "Uiz0hUNUje", "k24nEVIJ78", "Uiz0hUNUje");
@@ -31,13 +38,44 @@ $conn = mysqli_connect("remotemysql.com", "Uiz0hUNUje", "k24nEVIJ78", "Uiz0hUNUj
 if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
 }
-$sql = "select agreementid, agreementdate, expirydate  from Agreement where datediff(expirydate,curdate()) < 15";
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
+$sqlvendor = "select returnedid,vp.vpid as vpid,vendorname,email,phone,vp.vendorid as vendorid from returned left join vp on returned.vpid=vp.vpid left join Vendor on vp.vendorid=Vendor.vendorid where vp.vpid in(select returned.vpid from returned)";
+$sqlproduct = "select productname,Product.productid as productid from returned left join vp on returned.vpid=vp.vpid left join Product on vp.productid=Product.productid where vp.vpid in(select vpid from returned)";
+$sqlreturn = "select agreementdate,expirydate,price,collect from returned";
+$resultvendor = $conn->query($sqlvendor);
+$resultproduct = $conn->query($sqlproduct);
+$resultreturn = $conn->query($sqlreturn);
+
+if ($resultreturn->num_rows > 0) {
 // output data of each row
-while($row = $result->fetch_assoc()) {
-echo "<tr><td>" . $row["agreementid"]. "</td><td>" . $row["agreementdate"] . "</td><td>"
-. $row["expirydate"]. "</td></tr>";
+
+$myArray[] = null; 
+int i=0;
+while($row = $resultvendor->fetch_assoc()) {
+
+    $myArray[i]->vendorid = $row["vendorid"];
+    $myArray[i]->vendorname = $row["vendorname"];
+    $myArray[i]->email = $row["email"];
+    i=i+1;
+}
+i=0;
+while($row = $resultproduct->fetch_assoc()) {
+    $myArray[i]->productid = $row["productid"];
+    $myArray[i]->productname = $row["productname"];
+    i=i+1;
+}
+i=0;
+while($row = $resultreturn->fetch_assoc()) {
+    $myArray[i]->agreementdate = $row["agreementdate"];
+    $myArray[i]->expirydate = $row["expirydate"];
+    $myArray[i]->price = $row["price"];
+    $myArray[i]->collect = $row["collect"];
+    i=i+1;
+}
+foreach($myArray as $val){
+    echo "<tr><td>" . $myArray[i]->vendorid . "</td><td>" . $myArray[i]->vendorid . "</td><td>"
+. $myArray[i]->email . "</td><td>" . $myArray[i]->productid . "</td><td>" . $myArray[i]->productname . "</td><td>"
+. $myArray[i]->agreementdate . "</td><td>" . $myArray[i]->expirydate . "</td><td>"
+. $myArray[i]->price . "</td><td>" . $myArray[i]->collect . "</td></tr>";
 }
 echo "</table>";
 } else { echo "0 results"; }
